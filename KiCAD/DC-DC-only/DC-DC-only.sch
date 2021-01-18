@@ -446,4 +446,59 @@ Wire Wire Line
 	8450 4400 8450 4300
 Wire Wire Line
 	8450 4300 8550 4300
+$Comp
+L Mechanical:MountingHole H1
+U 1 1 60061C46
+P 2250 6250
+F 0 "H1" H 2350 6296 50  0000 L CNN
+F 1 "MountingHole" H 2350 6205 50  0000 L CNN
+F 2 "MeineBibpretty:EigenesMountingHole_2.7mm_M2.5" H 2250 6250 50  0001 C CNN
+F 3 "~" H 2250 6250 50  0001 C CNN
+	1    2250 6250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H2
+U 1 1 6006263D
+P 2250 6450
+F 0 "H2" H 2350 6496 50  0000 L CNN
+F 1 "MountingHole" H 2350 6405 50  0000 L CNN
+F 2 "MeineBibpretty:EigenesMountingHole_2.7mm_M2.5" H 2250 6450 50  0001 C CNN
+F 3 "~" H 2250 6450 50  0001 C CNN
+	1    2250 6450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H3
+U 1 1 60062968
+P 2250 6650
+F 0 "H3" H 2350 6696 50  0000 L CNN
+F 1 "MountingHole" H 2350 6605 50  0000 L CNN
+F 2 "MeineBibpretty:EigenesMountingHole_2.7mm_M2.5" H 2250 6650 50  0001 C CNN
+F 3 "~" H 2250 6650 50  0001 C CNN
+	1    2250 6650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H4
+U 1 1 60062D80
+P 2250 6850
+F 0 "H4" H 2350 6896 50  0000 L CNN
+F 1 "MountingHole" H 2350 6805 50  0000 L CNN
+F 2 "MeineBibpretty:EigenesMountingHole_2.7mm_M2.5" H 2250 6850 50  0001 C CNN
+F 3 "~" H 2250 6850 50  0001 C CNN
+	1    2250 6850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole LO1
+U 1 1 600638EF
+P 3150 6250
+F 0 "LO1" H 3250 6296 50  0000 L CNN
+F 1 "Logo" H 3250 6205 50  0000 L CNN
+F 2 "MeineBibpretty:Binary_6_v0.1" H 3150 6250 50  0001 C CNN
+F 3 "~" H 3150 6250 50  0001 C CNN
+	1    3150 6250
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
