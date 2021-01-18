@@ -347,7 +347,7 @@ Connection ~ 6700 2850
 Wire Wire Line
 	6700 2850 7100 2850
 Wire Wire Line
-	6000 3550 6700 3550
+	6000 3550 6350 3550
 Wire Wire Line
 	6700 3550 6700 3350
 Connection ~ 6000 3550
@@ -403,9 +403,6 @@ Wire Wire Line
 	7950 3850 7950 3750
 Wire Wire Line
 	7950 3350 7950 2850
-Connection ~ 7950 2850
-Wire Wire Line
-	7950 2850 8550 2850
 Connection ~ 7950 3750
 Wire Wire Line
 	7950 3750 7950 3650
@@ -458,17 +455,6 @@ F 3 "~" H 2250 6250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:MountingHole H2
-U 1 1 6006263D
-P 2250 6450
-F 0 "H2" H 2350 6496 50  0000 L CNN
-F 1 "MountingHole" H 2350 6405 50  0000 L CNN
-F 2 "MeineBibpretty:EigenesMountingHole_2.7mm_M2.5" H 2250 6450 50  0001 C CNN
-F 3 "~" H 2250 6450 50  0001 C CNN
-	1    2250 6450
-	1    0    0    -1  
-$EndComp
-$Comp
 L Mechanical:MountingHole H3
 U 1 1 60062968
 P 2250 6650
@@ -477,17 +463,6 @@ F 1 "MountingHole" H 2350 6605 50  0000 L CNN
 F 2 "MeineBibpretty:EigenesMountingHole_2.7mm_M2.5" H 2250 6650 50  0001 C CNN
 F 3 "~" H 2250 6650 50  0001 C CNN
 	1    2250 6650
-	1    0    0    -1  
-$EndComp
-$Comp
-L Mechanical:MountingHole H4
-U 1 1 60062D80
-P 2250 6850
-F 0 "H4" H 2350 6896 50  0000 L CNN
-F 1 "MountingHole" H 2350 6805 50  0000 L CNN
-F 2 "MeineBibpretty:EigenesMountingHole_2.7mm_M2.5" H 2250 6850 50  0001 C CNN
-F 3 "~" H 2250 6850 50  0001 C CNN
-	1    2250 6850
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -501,4 +476,37 @@ F 3 "~" H 3150 6250 50  0001 C CNN
 	1    3150 6250
 	1    0    0    -1  
 $EndComp
+$Comp
+L power:GND #PWR0107
+U 1 1 6008808E
+P 6350 3600
+F 0 "#PWR0107" H 6350 3350 50  0001 C CNN
+F 1 "GND" H 6350 3750 50  0000 C CNN
+F 2 "" H 6350 3600 50  0001 C CNN
+F 3 "" H 6350 3600 50  0001 C CNN
+	1    6350 3600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6350 3600 6350 3550
+Connection ~ 6350 3550
+Wire Wire Line
+	6350 3550 6700 3550
+$Comp
+L MeineBibli:SS14 D2
+U 1 1 60089C96
+P 8250 2850
+F 0 "D2" H 8200 2750 50  0000 L CNN
+F 1 "SS14" H 8150 2950 50  0000 L CNN
+F 2 "Diode_SMD:D_SMA" H 8250 2675 50  0001 C CNN
+F 3 "https://datasheet.lcsc.com/szlcsc/1903051003_MDD-Jiangsu-Yutai-Elec-SS14_C2480.pdf" H 8250 2850 50  0001 C CNN
+F 4 "C2480" V 8341 2930 50  0001 L CNN "LCSC"
+	1    8250 2850
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	7950 2850 8100 2850
+Connection ~ 7950 2850
+Wire Wire Line
+	8400 2850 8550 2850
 $EndSCHEMATC
