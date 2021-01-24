@@ -29,11 +29,11 @@ This table shows the hardware that is enabled on the PCB right away. Obviously o
 | IR Transmitter     |         |       |       |   IR   |   IR   |   IR   |    IR    |         IR         |       |
 | -                  |         |       |       |        |        |        |          |                    |       |
 
-'GPIO2' - always pulled HIGH, can't be LOW during boot
+`GPIO2`   - always pulled HIGH, can't be LOW during boot
 
-'GPIO15' - always pulled to GND - can't be HIGH during boot
+`GPIO15`  - always pulled to GND - can't be HIGH during boot
 
-'GPIO16' - HIGH during boot, shared with deepsleep wakeup
+`GPIO16`  - HIGH during boot, shared with deepsleep wakeup
 
 
 ## Example combinations
