@@ -15,19 +15,23 @@ THIS!
 
 This table shows the hardware that is enabled on the PCB right away. Obviously other hardware can be connected using the I/O headers as you please.
 
-|                    | `GPIO2` | GPIO4 | GPIO5 | GPIO12 | GPIO13 | GPIO14 | `GPIO15` | `GPIO16` | `ADC` |
-| ------------------ | :-----: | :---: | :---: | :----: | :----: | :----: | :------: | :------: | :---: |
-| Header for I/O     |  Temp   |  SDA  |  SCL  |   12   |   13   |   14   |    15    |    16    |  ADC  |
-| I²C                |         |  SDA  |  SCL  |        |        |        |          |          |       |
-| Deep Sleep         |         |       |       |        |        |        | Disable  |   RST    |       |
-| ADC                |         |       |       |        |        |        |          |          |   X   |
-| 433Mhz Transmitter |         |       |       |        |        |        |    X     |          |       |
-| PWM                |         |       |       |        |        |        |          |          |       |
-| AM2302/DHT22       |    X    |       |       |        |        |        |          |          |       |
-| DS18x20            |    X    |       |       |        |        |        |          |          |       |
-| 666A MOSFET PWM    |         |       |       |  Ch1   |  Ch2   |  Ch3   |   Ch4    |   Ch5    |       |
-| IR Transmitter     |         |       |       |   IR   |   IR   |   IR   |    IR    |    IR    |       |
-| -                  |         |       |       |        |        |        |          |          |       |
+|                    | `GPIO2` | GPIO4 | GPIO5 | GPIO12 | GPIO13 | GPIO14 | `GPIO15` |      `GPIO16`      | `ADC` |
+| ------------------ | :-----: | :---: | :---: | :----: | :----: | :----: | :------: | :----------------: | :---: |
+| Header for I/O     |  Temp   |  SDA  |  SCL  |   12   |   13   |   14   |    15    | 16 (HIGH AT BOOT)  |  ADC  |
+| I²C                |         |  SDA  |  SCL  |        |        |        |          |                    |       |
+| Deep Sleep         |         |       |       |        |        |        | Disable  |        RST         |       |
+| ADC                |         |       |       |        |        |        |          |                    |   X   |
+| 433Mhz Transmitter |         |       |       |        |        |        |    X     |                    |       |
+| PWM                |         |       |       |        |        |        |          |                    |       |
+| AM2302/DHT22       |    X    |       |       |        |        |        |          |                    |       |
+| DS18x20            |    X    |       |       |        |        |        |          |                    |       |
+| 666A MOSFET PWM    |         |       |       |  Ch1   |  Ch2   |  Ch3   |   Ch4    | Ch5 (HIGH AT BOOT) |       |
+| IR Transmitter     |         |       |       |   IR   |   IR   |   IR   |    IR    |         IR         |       |
+| -                  |         |       |       |        |        |        |          |                    |       |
+
+'GPIO2' - always pulled HIGH, can't be LOW during boot
+'GPIO15' - always pulled to GND - can't be HIGH during boot
+'GPIO16' - HIGH during boot, shared with deepsleep wakeup
 
 
 ## Example combinations
