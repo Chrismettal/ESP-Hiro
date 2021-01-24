@@ -30,7 +30,9 @@ This table shows the hardware that is enabled on the PCB right away. Obviously o
 | -                  |         |       |       |        |        |        |          |                    |       |
 
 'GPIO2' - always pulled HIGH, can't be LOW during boot
+
 'GPIO15' - always pulled to GND - can't be HIGH during boot
+
 'GPIO16' - HIGH during boot, shared with deepsleep wakeup
 
 
