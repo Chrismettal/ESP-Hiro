@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name Smart-Home-Erweiterung-rescue)(type Legacy)(uri "/home/chrismettal/GitLocal/ESP-Hiro_old/KiCAD/Smart Home Erweiterung-rescue.lib")(options "")(descr ""))
+)
