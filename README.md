@@ -1,17 +1,20 @@
 # ESP-Hiro <!-- omit in toc --> 
 
 - [What is this?](#what-is-this)
-- [Pin Tables](#pin-tables)
-  - [Hardware](#hardware)
-  - [Example combinations](#example-combinations)
+- [Pin tables](#pin-tables)
+  - [Devices](#devices)
+  - [Example builds](#example-builds)
+- [Hardware](#hardware)
+  - [Relays](#relays)
+    - [Board](#board)
 
 # What is this?
 
 THIS!
 
-# Pin Tables
+# Pin tables
 
-## Hardware
+## Devices
 
 This table shows the hardware that is enabled on the PCB right away. Obviously other hardware can be connected using the I/O headers as you please.
 
@@ -36,7 +39,7 @@ This table shows the hardware that is enabled on the PCB right away. Obviously o
 `GPIO16`  - HIGH during boot, shared with deepsleep wakeup
 
 
-## Example combinations
+## Example builds
 
 |                    | `GPIO2` |         GPIO4          |         GPIO5          |     GPIO12     |       GPIO13        |     GPIO14     |   `GPIO15`   |  `GPIO16`   |     `ADC`     |
 | ------------------ | :-----: | :--------------------: | :--------------------: | :------------: | :-----------------: | :------------: | :----------: | :---------: | :-----------: |
@@ -47,3 +50,14 @@ This table shows the hardware that is enabled on the PCB right away. Obviously o
 | Info Display       |         |        SDA LCD         |        SCL LCD         |   Encoder A    |      Encoder B      | Encoder Button |              |             |               |
 | -                  |         |                        |                        |                |                     |                |              |             |               |
 | -                  |         |                        |                        |                |                     |                |              |             |               |
+
+
+# Hardware
+
+## Relays
+
+### Board
+
+![RelayBoard](img/RelayBoard.png)
+
+These relay boards can be connected to basically any GPIO from the pin table you want, but you need to disconnect "JD-VCC" jumper and supply 3.3 V to JD so you don't feed 5 V back into the ESP.
