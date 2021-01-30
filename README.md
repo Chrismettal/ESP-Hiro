@@ -7,6 +7,7 @@
 - [Hardware](#hardware)
   - [Relays](#relays)
     - [Board](#board)
+  - [I²C](#ic)
 
 # What is this?
 
@@ -61,3 +62,7 @@ This table shows the hardware that is enabled on the PCB right away. Obviously o
 ![RelayBoard](img/RelayBoard.png)
 
 These relay boards can be connected to basically any GPIO from the pin table you want, but you need to disconnect "JD-VCC" jumper and supply 3.3 V to JD so you don't feed 5 V back into the ESP.
+
+## I²C
+
+Any I²C devices supported by Tasmota will work, but remember that some devices already include pullup resistors that need to be removed. For example HD44780 LCDs with I²C backpack will pull up the I²C lines to 5 V, which could damage the ESP and is not needed since I²C is already pulled up to 3.3 V on ESP-Hiro.
