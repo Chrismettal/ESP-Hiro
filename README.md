@@ -5,6 +5,7 @@
   - [Devices](#devices)
   - [Example builds](#example-builds)
 - [Hardware](#hardware)
+  - [MOSFETs](#mosfets)
   - [Relays](#relays)
     - [Board](#board)
   - [I²C](#ic)
@@ -29,7 +30,7 @@ This table shows the hardware that is enabled on the PCB right away. Obviously o
 | PWM                |         |       |       |        |        |        |          |                    |       |
 | AM2302/DHT22       |    X    |       |       |        |        |        |          |                    |       |
 | DS18x20            |    X    |       |       |        |        |        |          |                    |       |
-| 666A MOSFET PWM    |         |       |       |  Ch1   |  Ch2   |  Ch3   |   Ch4    | Ch5 (HIGH AT BOOT) |       |
+| 3A MOSFET PWM      |         |       |       |  Ch1   |  Ch2   |  Ch3   |   Ch4    | Ch5 (HIGH AT BOOT) |       |
 | IR Transmitter     |         |       |       |   IR   |   IR   |   IR   |    IR    |         IR         |       |
 | -                  |         |       |       |        |        |        |          |                    |       |
 
@@ -54,6 +55,15 @@ This table shows the hardware that is enabled on the PCB right away. Obviously o
 
 
 # Hardware
+
+## MOSFETs
+
+On board MOSFETs can be used to switch or PWM dim loads up to 75 W. Uses include RGB-WW-CW LEDs, heating actuators, small motors/pumps etc. The board can supply 5 A overall, every FET individually can provide up to 3 A. 
+
+- Used FET = AO3400A
+- Imax per FET = 3 A
+- Imax over all FETs = 5 A
+- U = 12 - 24 V
 
 ## Relays
 
