@@ -543,12 +543,12 @@ Wire Wire Line
 Wire Wire Line
 	1550 1800 1550 1950
 Wire Wire Line
-	1550 2250 1550 2350
+	1550 2300 1550 2350
 Wire Wire Line
 	2100 1950 1550 1950
 Connection ~ 1550 1950
 Wire Wire Line
-	1550 1950 1550 2050
+	1550 1950 1550 2000
 Text GLabel 3300 6050 0    47   Input ~ 0
 GPIO16
 Text GLabel 3950 6050 2    47   Input ~ 0
@@ -617,7 +617,7 @@ F 3 "~" H 3600 6050 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Smart-Home-Erweiterung-rescue:C_Small-device-Smart-Home-Erweiterung-rescue C?
+L Device:C C?
 U 1 1 6027D4E0
 P 1550 2150
 AR Path="/601D55C5/6027D4E0" Ref="C?"  Part="1" 
@@ -631,7 +631,7 @@ F 4 "C14663" V 1550 2150 50  0001 C CNN "LCSC"
 	-1   0    0    1   
 $EndComp
 $Comp
-L Smart-Home-Erweiterung-rescue:C_Small-device-Smart-Home-Erweiterung-rescue C?
+L Device:C C?
 U 1 1 60280798
 P 1250 2150
 AR Path="/601D55C5/60280798" Ref="C?"  Part="1" 
@@ -647,12 +647,12 @@ $EndComp
 Wire Wire Line
 	1150 1250 1250 1250
 Wire Wire Line
-	1250 2050 1250 1250
+	1250 2000 1250 1250
 Connection ~ 1250 1250
 Wire Wire Line
 	1250 1250 2100 1250
 Wire Wire Line
-	1250 2250 1250 2350
+	1250 2300 1250 2350
 Wire Wire Line
 	1250 2350 1400 2350
 Wire Wire Line
@@ -672,7 +672,7 @@ F 3 "~" H 14200 9500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Smart-Home-Erweiterung-rescue:R-device-Smart-Home-Erweiterung-rescue R?
+L Device:R R?
 U 1 1 6025BA62
 P 4950 3750
 AR Path="/601D55C5/6025BA62" Ref="R?"  Part="1" 
@@ -710,7 +710,7 @@ F 3 "" H 4950 4600 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Smart-Home-Erweiterung-rescue:R-device-Smart-Home-Erweiterung-rescue R?
+L Device:R R?
 U 1 1 601F651F
 P 4950 4250
 AR Path="/601D55C5/601F651F" Ref="R?"  Part="1" 
@@ -724,52 +724,24 @@ F 4 "C4211" H 4950 4250 50  0001 C CNN "LCSC"
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	2150 6900 2150 6800
-Wire Wire Line
-	2150 7600 2150 7500
-$Comp
-L power:+3.3V #PWR?
-U 1 1 602A00DE
-P 2150 6800
-AR Path="/601D55C5/602A00DE" Ref="#PWR?"  Part="1" 
-AR Path="/602A00DE" Ref="#PWR05"  Part="1" 
-F 0 "#PWR05" H 2150 6650 50  0001 C CNN
-F 1 "+3.3V" H 2150 6950 50  0000 C CNN
-F 2 "" H 2150 6800 50  0001 C CNN
-F 3 "" H 2150 6800 50  0001 C CNN
-	1    2150 6800
-	1    0    0    -1  
-$EndComp
+	2050 7600 2050 7500
 Wire Wire Line
 	1650 7200 1750 7200
 $Comp
 L power:GND #PWR?
 U 1 1 6029C38F
-P 2150 7600
+P 2050 7600
 AR Path="/601D55C5/6029C38F" Ref="#PWR?"  Part="1" 
 AR Path="/6029C38F" Ref="#PWR06"  Part="1" 
-F 0 "#PWR06" H 2150 7350 50  0001 C CNN
-F 1 "GND" H 2150 7450 50  0000 C CNN
-F 2 "" H 2150 7600 50  0001 C CNN
-F 3 "" H 2150 7600 50  0001 C CNN
-	1    2150 7600
+F 0 "#PWR06" H 2050 7350 50  0001 C CNN
+F 1 "GND" H 2050 7450 50  0000 C CNN
+F 2 "" H 2050 7600 50  0001 C CNN
+F 3 "" H 2050 7600 50  0001 C CNN
+	1    2050 7600
 	1    0    0    -1  
 $EndComp
 Text GLabel 1650 7200 0    60   Input ~ 0
 GPIO2
-$Comp
-L Smart-Home-Erweiterung-rescue:DHT11-Smart-Home-Erweiterung-rescue U?
-U 1 1 6029C388
-P 2050 7200
-AR Path="/601D55C5/6029C388" Ref="U?"  Part="1" 
-AR Path="/6029C388" Ref="U1"  Part="1" 
-F 0 "U1" H 2200 7450 50  0000 C CNN
-F 1 "DHT22/DS18B20 header" H 2450 7550 50  0000 C CNN
-F 2 "Sensors:DHT22_Temperature_Humidity" H 2200 7450 50  0001 C CNN
-F 3 "" H 2200 7450 50  0001 C CNN
-	1    2050 7200
-	-1   0    0    -1  
-$EndComp
 Wire Wire Line
 	2000 3850 1800 3850
 Wire Wire Line
@@ -789,7 +761,7 @@ SDA
 Text GLabel 2000 3850 2    47   Input ~ 0
 SCL
 $Comp
-L Smart-Home-Erweiterung-rescue:R-device-Smart-Home-Erweiterung-rescue R?
+L Device:R R?
 U 1 1 602700E8
 P 1650 3850
 AR Path="/601D55C5/602700E8" Ref="R?"  Part="1" 
@@ -803,7 +775,7 @@ F 4 "C22790" V 1650 3850 50  0001 C CNN "LCSC"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Smart-Home-Erweiterung-rescue:R-device-Smart-Home-Erweiterung-rescue R?
+L Device:R R?
 U 1 1 6026FF3D
 P 1650 4000
 AR Path="/601D55C5/6026FF3D" Ref="R?"  Part="1" 
@@ -817,7 +789,7 @@ F 4 "C22790" V 1650 4000 50  0001 C CNN "LCSC"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Smart-Home-Erweiterung-rescue:R-device-Smart-Home-Erweiterung-rescue R?
+L Device:R R?
 U 1 1 6025CD2E
 P 1650 5100
 AR Path="/601D55C5/6025CD2E" Ref="R?"  Part="1" 
@@ -831,7 +803,7 @@ F 4 "C22790" V 1650 5100 50  0001 C CNN "LCSC"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Smart-Home-Erweiterung-rescue:R-device-Smart-Home-Erweiterung-rescue R?
+L Device:R R?
 U 1 1 6025CB7B
 P 1650 4600
 AR Path="/601D55C5/6025CB7B" Ref="R?"  Part="1" 
@@ -845,7 +817,7 @@ F 4 "C22790" V 1650 4600 50  0001 C CNN "LCSC"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Smart-Home-Erweiterung-rescue:R-device-Smart-Home-Erweiterung-rescue R?
+L Device:R R?
 U 1 1 6025C99C
 P 1650 4450
 AR Path="/601D55C5/6025C99C" Ref="R?"  Part="1" 
@@ -859,7 +831,7 @@ F 4 "C22790" V 1650 4450 50  0001 C CNN "LCSC"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Smart-Home-Erweiterung-rescue:R-device-Smart-Home-Erweiterung-rescue R?
+L Device:R R?
 U 1 1 6025C725
 P 1650 4300
 AR Path="/601D55C5/6025C725" Ref="R?"  Part="1" 
@@ -873,7 +845,7 @@ F 4 "C22790" V 1650 4300 50  0001 C CNN "LCSC"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Smart-Home-Erweiterung-rescue:R-device-Smart-Home-Erweiterung-rescue R?
+L Device:R R?
 U 1 1 6025C0CA
 P 1650 4150
 AR Path="/601D55C5/6025C0CA" Ref="R?"  Part="1" 
@@ -897,9 +869,9 @@ Wire Wire Line
 Wire Wire Line
 	1300 4150 1300 4300
 Wire Wire Line
-	1550 4850 1300 4850
+	1500 4850 1300 4850
 Wire Wire Line
-	1900 4850 1750 4850
+	1900 4850 1800 4850
 Wire Wire Line
 	1900 4600 1900 4850
 Connection ~ 1900 4600
@@ -934,13 +906,13 @@ Wire Wire Line
 Text Notes 1500 3600 0    47   ~ 0
 Pullup/-down
 $Comp
-L Smart-Home-Erweiterung-rescue:C_Small-device-Smart-Home-Erweiterung-rescue C?
+L Device:C C?
 U 1 1 601FDA62
 P 1650 4850
 AR Path="/601D55C5/601FDA62" Ref="C?"  Part="1" 
 AR Path="/601FDA62" Ref="C3"  Part="1" 
-F 0 "C3" V 1550 4800 50  0000 L CNN
-F 1 "100nF" V 1750 4750 50  0000 L CNN
+F 0 "C3" V 1600 4900 50  0000 L CNN
+F 1 "100nF" V 1700 4900 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 1650 4850 50  0001 C CNN
 F 3 "" H 1650 4850 50  0001 C CNN
 F 4 "C14663" V 1650 4850 50  0001 C CNN "LCSC"
@@ -996,7 +968,7 @@ F 4 "C20917" H 14250 3400 50  0001 C CNN "LCSC"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Smart-Home-Erweiterung-rescue:R-device-Smart-Home-Erweiterung-rescue R?
+L Device:R R?
 U 1 1 6030A7D3
 P 13950 3650
 AR Path="/601D55C5/6030A7D3" Ref="R?"  Part="1" 
@@ -1098,7 +1070,7 @@ F 4 "C20917" H 14250 1850 50  0001 C CNN "LCSC"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Smart-Home-Erweiterung-rescue:R-device-Smart-Home-Erweiterung-rescue R?
+L Device:R R?
 U 1 1 6033B84E
 P 13950 2100
 AR Path="/601D55C5/6033B84E" Ref="R?"  Part="1" 
@@ -1200,7 +1172,7 @@ F 4 "C20917" H 14250 4950 50  0001 C CNN "LCSC"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Smart-Home-Erweiterung-rescue:R-device-Smart-Home-Erweiterung-rescue R?
+L Device:R R?
 U 1 1 6034834A
 P 13950 5200
 AR Path="/601D55C5/6034834A" Ref="R?"  Part="1" 
@@ -1302,7 +1274,7 @@ F 4 "C20917" H 14250 6500 50  0001 C CNN "LCSC"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Smart-Home-Erweiterung-rescue:R-device-Smart-Home-Erweiterung-rescue R?
+L Device:R R?
 U 1 1 60353029
 P 13950 6750
 AR Path="/601D55C5/60353029" Ref="R?"  Part="1" 
@@ -1404,7 +1376,7 @@ F 4 "C20917" H 14250 8050 50  0001 C CNN "LCSC"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Smart-Home-Erweiterung-rescue:R-device-Smart-Home-Erweiterung-rescue R?
+L Device:R R?
 U 1 1 6035EA25
 P 13950 8300
 AR Path="/601D55C5/6035EA25" Ref="R?"  Part="1" 
@@ -1516,7 +1488,7 @@ Wire Wire Line
 Wire Wire Line
 	3900 1250 4000 1250
 $Comp
-L Smart-Home-Erweiterung-rescue:ESP-12E-Smart-Home-Erweiterung-rescue U?
+L ESP8266:ESP-12E U?
 U 1 1 60207857
 P 3000 1550
 AR Path="/601D55C5/60207857" Ref="U?"  Part="1" 
@@ -1570,4 +1542,32 @@ F 3 "~" H 4450 4050 50  0001 C CNN
 $EndComp
 Text Notes 4700 3350 0    47   ~ 0
 ADC
+$Comp
+L power:+3.3V #PWR?
+U 1 1 602A00DE
+P 2050 6800
+AR Path="/601D55C5/602A00DE" Ref="#PWR?"  Part="1" 
+AR Path="/602A00DE" Ref="#PWR05"  Part="1" 
+F 0 "#PWR05" H 2050 6650 50  0001 C CNN
+F 1 "+3.3V" H 2050 6950 50  0000 C CNN
+F 2 "" H 2050 6800 50  0001 C CNN
+F 3 "" H 2050 6800 50  0001 C CNN
+	1    2050 6800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2050 6900 2050 6800
+$Comp
+L Sensor:DHT11 U?
+U 1 1 6029C388
+P 2050 7200
+AR Path="/601D55C5/6029C388" Ref="U?"  Part="1" 
+AR Path="/6029C388" Ref="U1"  Part="1" 
+F 0 "U1" H 2200 7450 50  0000 C CNN
+F 1 "DHT22/DS18B20 header" H 2550 7550 50  0000 C CNN
+F 2 "Sensors:DHT22_Temperature_Humidity" H 2200 7450 50  0001 C CNN
+F 3 "" H 2200 7450 50  0001 C CNN
+	1    2050 7200
+	-1   0    0    -1  
+$EndComp
 $EndSCHEMATC
