@@ -1977,10 +1977,10 @@ Connection ~ 3150 6400
 Wire Wire Line
 	3150 6400 3150 5150
 $Comp
-L Jumper:SolderJumper_2_Open JP?
+L Jumper:SolderJumper_2_Open JP2
 U 1 1 609E58BA
 P 2900 4800
-F 0 "JP?" V 2750 4900 50  0000 C CNN
+F 0 "JP2" V 2750 4900 50  0000 C CNN
 F 1 "VBUS-5V bridge" H 2900 4700 50  0000 C CNN
 F 2 "Jumper:SolderJumper-2_P1.3mm_Open_TrianglePad1.0x1.5mm" H 2900 4800 50  0001 C CNN
 F 3 "~" H 2900 4800 50  0001 C CNN
