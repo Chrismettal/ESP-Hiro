@@ -1,3 +1,2 @@
 (sym_lib_table
-  (lib (name "ESP-Hiro-rescue")(type "Legacy")(uri "${KIPRJMOD}/ESP-Hiro-rescue.lib")(options "")(descr ""))
 )
