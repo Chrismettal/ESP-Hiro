@@ -6,6 +6,7 @@
   - [Example builds](#example-builds)
 - [Hardware](#hardware)
   - [MOSFETs](#mosfets)
+  - [IR](#ir)
   - [Relays](#relays)
     - [Board](#board)
   - [I²C](#ic)
@@ -32,7 +33,7 @@ This table shows the hardware that is enabled on the PCB right away. Obviously o
 | AM2302/DHT22       |    X    |       |       |                |        |        |          |                    |       |
 | DS18x20            |    X    |       |       |                |        |        |          |                    |       |
 | 3A MOSFET PWM      |         |       |       |      Ch1       |  Ch2   |  Ch3   |   Ch4    | Ch5 (HIGH AT BOOT) |       |
-| IR Transmitter     |         |       |       |       IR       |   IR   |   IR   |    IR    |         IR         |       |
+| IR Transmitter     |         |       |       |                |        |        |          |         IR         |       |
 | PCF8574            |         |  SDA  |  SCL  | `INT (jumper)` |        |        |          |                    |       |
 
 `GPIO0`   - always pulled HIGH, can't be LOW during boot
@@ -67,6 +68,10 @@ On board MOSFETs can be used to switch or PWM dim loads up to 75 W. Uses include
 - Imax per FET = 3 A
 - Imax over all FETs = 5 A
 - U = 12 - 24 V
+
+## IR
+
+A header for an IR blaster is present, connected via the MOSFET Q5. It is supplied by 3.3 V via a jumper configurable current limit resistor of `100 Ohms / 22 Ohms` which works out to around `20 mA / 90 mA` depending on your diodes forward voltage.
 
 ## Relays
 
