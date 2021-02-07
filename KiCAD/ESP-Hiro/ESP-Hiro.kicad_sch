@@ -3534,6 +3534,23 @@
     )
   )
 
+  (symbol (lib_id "Mechanical:MountingHole") (at 256.54 273.05 0) (unit 1)
+    (in_bom no) (on_board yes)
+    (uuid 799ea7d2-1128-4cb5-acd1-eb2ac29677fd)
+    (property "Reference" "LOGO8" (id 0) (at 259.08 271.882 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Value" "GPL" (id 1) (at 259.08 274.193 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "Symbol:Symbol_GNU-GPL_CopperTop_Small" (id 2) (at 256.54 273.05 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (id 3) (at 256.54 273.05 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+  )
+
   (symbol (lib_id "Mechanical:MountingHole") (at 271.78 242.57 0) (unit 1)
     (in_bom no) (on_board yes)
     (uuid 3e5d92b4-a6fc-4cd7-8a66-e72842867db0)
@@ -5306,6 +5323,9 @@
     )
     (path "/7a04bc65-8c52-4468-8ae4-0d9a8f8dcc47"
       (reference "LOGO7") (unit 1) (value "RoHS") (footprint "Symbol:RoHS-Logo_6mm_SilkScreen")
+    )
+    (path "/799ea7d2-1128-4cb5-acd1-eb2ac29677fd"
+      (reference "LOGO8") (unit 1) (value "GPL") (footprint "Symbol:Symbol_GNU-GPL_CopperTop_Small")
     )
     (path "/00000000-0000-0000-0000-00006033b79f"
       (reference "Q1") (unit 1) (value "AO3400A") (footprint "Package_TO_SOT_SMD:SOT-23")
