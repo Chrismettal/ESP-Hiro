@@ -5,7 +5,6 @@
 *.000
 *.bak
 *.bck
-*.net
 *.kicad_pcb-bak
 *.kicad_sch-bak
 *.kicad_prl
@@ -23,3 +22,6 @@ fp-info-cache
 # KiCad autorouter files (exported from Pcbnew)
 *.dsn
 *.ses
+
+# KiCad backup files
+*-backups/
