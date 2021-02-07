@@ -4251,7 +4251,7 @@
   )
 
   (symbol (lib_id "Jumper:SolderJumper_2_Open") (at 73.66 121.92 270) (unit 1)
-    (in_bom yes) (on_board yes)
+    (in_bom no) (on_board yes)
     (uuid 00000000-0000-0000-0000-0000609e58ba)
     (property "Reference" "JP2" (id 0) (at 76.2 118.11 90))
     (property "Value" "VBUS-5V bridge" (id 1) (at 71.12 121.92 0))
@@ -4266,7 +4266,7 @@
   )
 
   (symbol (lib_id "Jumper:SolderJumper_2_Open") (at 240.03 40.64 0) (unit 1)
-    (in_bom yes) (on_board yes)
+    (in_bom no) (on_board yes)
     (uuid 00000000-0000-0000-0000-00006025e56c)
     (property "Reference" "JP1" (id 0) (at 240.03 35.433 0))
     (property "Value" "DeepSleep wakeup jumper" (id 1) (at 240.03 37.7444 0))
