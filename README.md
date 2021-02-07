@@ -9,6 +9,7 @@
   - [Relays](#relays)
     - [Board](#board)
   - [I²C](#ic)
+    - [PCF8574](#pcf8574)
 
 # What is this?
 
@@ -20,19 +21,21 @@ THIS!
 
 This table shows the hardware that is enabled on the PCB right away. Obviously other hardware can be connected using the I/O headers as you please.
 
-|                    | `GPIO2` | GPIO4 | GPIO5 | GPIO12 | GPIO13 | GPIO14 | `GPIO15` |      `GPIO16`      | `ADC` |
-| ------------------ | :-----: | :---: | :---: | :----: | :----: | :----: | :------: | :----------------: | :---: |
-| Header for I/O     |  Temp   |  SDA  |  SCL  |   12   |   13   |   14   |    15    | 16 (HIGH AT BOOT)  |  ADC  |
-| I²C                |         |  SDA  |  SCL  |        |        |        |          |                    |       |
-| Deep Sleep         |         |       |       |        |        |        | Disable  |        RST         |       |
-| ADC                |         |       |       |        |        |        |          |                    |   X   |
-| 433Mhz Transmitter |         |       |       |        |        |        |    X     |                    |       |
-| PWM                |         |       |       |        |        |        |          |                    |       |
-| AM2302/DHT22       |    X    |       |       |        |        |        |          |                    |       |
-| DS18x20            |    X    |       |       |        |        |        |          |                    |       |
-| 3A MOSFET PWM      |         |       |       |  Ch1   |  Ch2   |  Ch3   |   Ch4    | Ch5 (HIGH AT BOOT) |       |
-| IR Transmitter     |         |       |       |   IR   |   IR   |   IR   |    IR    |         IR         |       |
-| -                  |         |       |       |        |        |        |          |                    |       |
+|                    | `GPIO2` | GPIO4 | GPIO5 |     GPIO12     | GPIO13 | GPIO14 | `GPIO15` |      `GPIO16`      | `ADC` |
+| ------------------ | :-----: | :---: | :---: | :------------: | :----: | :----: | :------: | :----------------: | :---: |
+| Header for I/O     |  Temp   |  SDA  |  SCL  |       12       |   13   |   14   |    15    | 16 (HIGH AT BOOT)  |  ADC  |
+| I²C                |         |  SDA  |  SCL  |                |        |        |          |                    |       |
+| Deep Sleep         |         |       |       |                |        |        | Disable  |        RST         |       |
+| ADC                |         |       |       |                |        |        |          |                    |   X   |
+| 433Mhz Transmitter |         |       |       |                |        |        |    X     |                    |       |
+| PWM                |         |       |       |                |        |        |          |                    |       |
+| AM2302/DHT22       |    X    |       |       |                |        |        |          |                    |       |
+| DS18x20            |    X    |       |       |                |        |        |          |                    |       |
+| 3A MOSFET PWM      |         |       |       |      Ch1       |  Ch2   |  Ch3   |   Ch4    | Ch5 (HIGH AT BOOT) |       |
+| IR Transmitter     |         |       |       |       IR       |   IR   |   IR   |    IR    |         IR         |       |
+| PCF8574            |         |  SDA  |  SCL  | `INT (jumper)` |        |        |          |                    |       |
+
+`GPIO0`   - always pulled HIGH, can't be LOW during boot
 
 `GPIO2`   - always pulled HIGH, can't be LOW during boot
 
@@ -71,8 +74,15 @@ On board MOSFETs can be used to switch or PWM dim loads up to 75 W. Uses include
 
 ![RelayBoard](img/RelayBoard.png)
 
-These relay boards can be connected to basically any GPIO from the pin table you want, but you need to disconnect "JD-VCC" jumper and supply 3.3 V to JD so you don't feed 5 V back into the ESP.
+These relay boards can be connected to basically any GPIO from the pin table you want, but you need to disconnect "JD-VCC" jumper and supply 3.3 V to JD so you don't feed 5 V back into the ESP. They can also be connected to the PCF8574 expander header outputs if configured accordingly.
 
 ## I²C
 
-Any I²C devices supported by Tasmota will work, but remember that some devices already include pullup resistors that need to be removed. For example HD44780 LCDs with I²C backpack will pull up the I²C lines to 5 V, which could damage the ESP and is not needed since I²C is already pulled up to 3.3 V on ESP-Hiro.
+- SDA = GPIO4
+- SCL = GPIO5
+
+Any I²C devices supported by Tasmota will work, but remember that some devices already include pullup resistors that need to be removed. For example HD44780 LCDs with PCF8574 I²C backpacks will pull up the I²C lines to 5 V, which could damage the ESP and is not needed since I²C is already pulled up to 3.3 V on ESP-Hiro.
+
+### PCF8574
+
+Right now Tasmota only supports "relay outputs" for PCF8574, but GPIO12 can be connected to the expander interrupt pin with a jumper for future input application. Beware that this needs to apply a pullup to GPIO12 with will turn Q1 on! The address of the PCF8574 has to be set with 3 jumpers as well.
