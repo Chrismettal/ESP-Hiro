@@ -78,8 +78,8 @@ These relay boards can be connected to basically any GPIO from the pin table you
 
 ## I²C
 
-- SDA = GPIO4
-- SCL = GPIO5
+- `SDA = GPIO4`
+- `SCL = GPIO5`
 
 Any I²C devices supported by Tasmota will work, but remember that some devices already include pullup resistors that need to be removed. For example HD44780 LCDs with PCF8574 I²C backpacks will pull up the I²C lines to 5 V, which could damage the ESP and is not needed since I²C is already pulled up to 3.3 V on ESP-Hiro.
 
