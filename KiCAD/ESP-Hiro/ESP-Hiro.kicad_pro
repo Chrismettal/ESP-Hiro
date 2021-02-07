@@ -360,7 +360,15 @@
     "meta": {
       "version": 0
     },
-    "net_colors": null
+    "net_colors": {
+      "+3V3": "rgb(255, 176, 0)",
+      "+5V": "rgb(255, 0, 0)",
+      "GND": "rgb(0, 0, 0)",
+      "SCL": "rgb(0, 255, 0)",
+      "SDA": "rgb(0, 255, 0)",
+      "VBUS": "rgb(255, 0, 0)",
+      "VDC": "rgb(255, 255, 0)"
+    }
   },
   "pcbnew": {
     "last_paths": {
