@@ -71,7 +71,7 @@ On board MOSFETs can be used to switch or PWM dim loads up to 75 W. Uses include
 
 ## IR
 
-A header for an IR blaster is present, connected via the MOSFET Q5. It is supplied by 3.3 V via a jumper configurable current limit resistor of `100 Ohms / 22 Ohms` which works out to around `20 mA / 90 mA` depending on your diodes forward voltage.
+A header for an IR blaster is present, connected via the MOSFET Q5. It is supplied by 5 V via a jumper configurable current limit resistor of `180 Ohms / 33 Ohms` which works out to around `20 mA / 100 mA` depending on your diodes forward voltage.
 
 ## Relays
 

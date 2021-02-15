@@ -4182,20 +4182,20 @@
     (pin "1" (uuid a75c0534-595e-4021-9d4f-bba31acb0c4c))
   )
 
-  (symbol (lib_id "power:+3.3V") (at 364.49 173.99 0) (unit 1)
+  (symbol (lib_id "power:+5V") (at 364.49 173.99 0) (unit 1)
     (in_bom yes) (on_board yes)
-    (uuid c8ed3fbd-170c-482c-9028-d77e84b9acf6)
-    (property "Reference" "#PWR037" (id 0) (at 364.49 177.8 0)
+    (uuid 0a353d41-ba7a-444c-b50f-1793fc8442a5)
+    (property "Reference" "#PWR?" (id 0) (at 364.49 177.8 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Value" "+3.3V" (id 1) (at 364.49 170.18 0))
+    (property "Value" "+5V" (id 1) (at 364.49 170.434 0))
     (property "Footprint" "" (id 2) (at 364.49 173.99 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "" (id 3) (at 364.49 173.99 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 80a6618c-859e-4487-a56f-7cd157f646e0))
+    (pin "1" (uuid abb7f0b8-1b1c-4ad0-8a59-d355c256da58))
   )
 
   (symbol (lib_id "power:VDC") (at 386.08 35.56 0) (unit 1)
@@ -5269,7 +5269,7 @@
     (property "Reference" "R29" (id 0) (at 358.648 181.7116 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "100R" (id 1) (at 356.87 185.42 90)
+    (property "Value" "180R" (id 1) (at 356.87 185.42 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (id 2) (at 355.092 182.88 90)
@@ -5278,7 +5278,7 @@
     (property "Datasheet" "~" (id 3) (at 356.87 182.88 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "LCSC" "C22775" (id 4) (at 356.87 182.88 0)
+    (property "LCSC" "C22828" (id 4) (at 356.87 182.88 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid dc103681-5898-4b84-ad95-8f209a2e8782))
@@ -5401,7 +5401,7 @@
     (property "Reference" "R30" (id 0) (at 373.888 181.7116 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "22R" (id 1) (at 372.11 185.42 90)
+    (property "Value" "33R" (id 1) (at 372.11 185.42 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (id 2) (at 370.332 182.88 90)
@@ -5410,7 +5410,7 @@
     (property "Datasheet" "~" (id 3) (at 372.11 182.88 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "LCSC" "C23345" (id 4) (at 372.11 182.88 0)
+    (property "LCSC" " C23140" (id 4) (at 372.11 182.88 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid ebe50a72-0b13-4da3-8747-2374bf043408))
@@ -7176,9 +7176,6 @@
     (path "/13e3475c-204e-44f7-8d37-d13c991e5b3d"
       (reference "#PWR036") (unit 1) (value "+3.3V") (footprint "")
     )
-    (path "/c8ed3fbd-170c-482c-9028-d77e84b9acf6"
-      (reference "#PWR037") (unit 1) (value "+3.3V") (footprint "")
-    )
     (path "/00000000-0000-0000-0000-00006023e253"
       (reference "#PWR0101") (unit 1) (value "GND") (footprint "")
     )
@@ -7205,6 +7202,9 @@
     )
     (path "/c96feb54-95ca-42a3-811a-0c1a0afc8915"
       (reference "#PWR0109") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/0a353d41-ba7a-444c-b50f-1793fc8442a5"
+      (reference "#PWR?") (unit 1) (value "+5V") (footprint "")
     )
     (path "/00000000-0000-0000-0000-000060280798"
       (reference "C1") (unit 1) (value "100nF") (footprint "Capacitor_SMD:C_0603_1608Metric")
@@ -7522,10 +7522,10 @@
       (reference "R28") (unit 1) (value "12k") (footprint "Resistor_SMD:R_0603_1608Metric")
     )
     (path "/26ec2c4f-d279-464e-8bb6-0fb0bc9c68eb"
-      (reference "R29") (unit 1) (value "100R") (footprint "Resistor_SMD:R_0603_1608Metric")
+      (reference "R29") (unit 1) (value "180R") (footprint "Resistor_SMD:R_0603_1608Metric")
     )
     (path "/798a225f-7717-461c-82e6-4e3f82d84aec"
-      (reference "R30") (unit 1) (value "22R") (footprint "Resistor_SMD:R_0603_1608Metric")
+      (reference "R30") (unit 1) (value "33R") (footprint "Resistor_SMD:R_0603_1608Metric")
     )
     (path "/494a5c65-fdb0-44ce-bf0e-cdc07b19a018"
       (reference "U1") (unit 1) (value "PCF8574A") (footprint "Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm")
