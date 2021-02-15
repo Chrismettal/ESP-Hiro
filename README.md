@@ -20,21 +20,21 @@ THIS!
 
 ## Devices
 
-This table shows the hardware that is enabled on the PCB right away. Obviously other hardware can be connected using the I/O headers as you please.
+This table shows the hardware that is enabled on the PCB right away. Obviously other hardware can be connected using the I/O headers as you please. `PD` pins are pulled down, `PU` are pulled up.
 
-|                    | `GPIO2` | GPIO4 | GPIO5 |     GPIO12     | GPIO13 | GPIO14 | `GPIO15` |      `GPIO16`      | `ADC` |
-| ------------------ | :-----: | :---: | :---: | :------------: | :----: | :----: | :------: | :----------------: | :---: |
-| Header for I/O     |  Temp   |  SDA  |  SCL  |       12       |   13   |   14   |    15    | 16 (HIGH AT BOOT)  |  ADC  |
-| I²C                |         |  SDA  |  SCL  |                |        |        |          |                    |       |
-| Deep Sleep         |         |       |       |                |        |        | Disable  |        RST         |       |
-| ADC                |         |       |       |                |        |        |          |                    |   X   |
-| 433Mhz Transmitter |         |       |       |                |        |        |    X     |                    |       |
-| PWM                |         |       |       |                |        |        |          |                    |       |
-| AM2302/DHT22       |    X    |       |       |                |        |        |          |                    |       |
-| DS18x20            |    X    |       |       |                |        |        |          |                    |       |
-| 3A MOSFET PWM      |         |       |       |      Ch1       |  Ch2   |  Ch3   |   Ch4    | Ch5 (HIGH AT BOOT) |       |
-| IR Transmitter     |         |       |       |                |        |        |          |         IR         |       |
-| PCF8574            |         |  SDA  |  SCL  | `INT (jumper)` |        |        |          |                    |       |
+|                    | `GPIO2` (PU) | GPIO4 (PU) | GPIO5 (PU) |  GPIO12 (PD)   | GPIO13 (PD) | GPIO14 (PD) | `GPIO15` (PD) |   `GPIO16` (PD)    | `ADC` |
+| ------------------ | :----------: | :--------: | :--------: | :------------: | :---------: | :---------: | :-----------: | :----------------: | :---: |
+| Header for I/O     |     Temp     |    SDA     |    SCL     |       12       |     13      |     14      |      15       | 16 (HIGH AT BOOT)  |  ADC  |
+| I²C                |              |    SDA     |    SCL     |                |             |             |               |                    |       |
+| Deep Sleep         |              |            |            |                |             |             |    Disable    |        RST         |       |
+| ADC                |              |            |            |                |             |             |               |                    |   X   |
+| 433Mhz Transmitter |              |            |            |                |             |             |       X       |                    |       |
+| PWM                |              |            |            |                |             |             |               |                    |       |
+| AM2302/DHT22       |      X       |            |            |                |             |             |               |                    |       |
+| DS18x20            |      X       |            |            |                |             |             |               |                    |       |
+| 3A MOSFET PWM      |              |            |            |      Ch1       |     Ch2     |     Ch3     |      Ch4      | Ch5 (HIGH AT BOOT) |       |
+| IR Transmitter     |              |            |            |                |             |             |               |         IR         |       |
+| PCF8574            |              |    SDA     |    SCL     | `INT (jumper)` |             |             |               |                    |       |
 
 `GPIO0`   - always pulled HIGH, can't be LOW during boot
 
