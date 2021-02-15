@@ -2,7 +2,7 @@
 <export version="D">
   <design>
     <source>/home/chrismettal/GitLocal/ESP-Hiro/KiCAD/ESP-Hiro/ESP-Hiro.kicad_sch</source>
-    <date>Mon Feb 15 21:20:46 2021</date>
+    <date>Mon Feb 15 21:39:47 2021</date>
     <tool>Eeschema (5.99.0-8805-ge26c912b86)</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -269,6 +269,98 @@
       <property name="Sheetfile" value="ESP-Hiro.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>3ca21c01-fe70-47c1-a2d7-dc07d4da3e1d</tstamp>
+    </comp>
+    <comp ref="C19">
+      <value>100uF</value>
+      <footprint>Capacitor_SMD:CP_Elec_6.3x5.8</footprint>
+      <datasheet>https://datasheet.lcsc.com/szlcsc/1811201537_Lelon-VZT101M1V0606-TRO_C249982.pdf</datasheet>
+      <fields>
+        <field name="LCSC">C249982</field>
+      </fields>
+      <libsource lib="Device" part="CP1" description="Polarized capacitor, US symbol"/>
+      <property name="LCSC" value="C249982"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="ESP-Hiro.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>38724c9f-1de5-4851-aa7d-1c85cc4c5e98</tstamp>
+    </comp>
+    <comp ref="C20">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="LCSC">C14663</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="LCSC" value="C14663"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="ESP-Hiro.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>24c66b48-0754-409b-9dc2-3b231dd9724c</tstamp>
+    </comp>
+    <comp ref="C21">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="LCSC">C14663</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="LCSC" value="C14663"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="ESP-Hiro.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>473b7344-e749-4f93-a67f-6ed17035dc27</tstamp>
+    </comp>
+    <comp ref="C22">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="LCSC">C14663</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="LCSC" value="C14663"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="ESP-Hiro.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>24d9420e-f2cf-4e44-bd9d-7a7bb3cfe1db</tstamp>
+    </comp>
+    <comp ref="C23">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="LCSC">C14663</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="LCSC" value="C14663"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="ESP-Hiro.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5a0d5560-fb2f-4313-8988-5f0eca5b6f8f</tstamp>
+    </comp>
+    <comp ref="C24">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="LCSC">C14663</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="LCSC" value="C14663"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="ESP-Hiro.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>1fec0f4d-7ddd-4563-8f50-dd229e180ba2</tstamp>
+    </comp>
+    <comp ref="C25">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="LCSC">C14663</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="LCSC" value="C14663"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="ESP-Hiro.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>038c4047-d0bd-4e92-b612-bee4a1cb75d2</tstamp>
     </comp>
     <comp ref="D1">
       <value>SS14</value>
@@ -1524,6 +1616,22 @@
         <pin num="2" name="~" type="passive"/>
       </pins>
     </libpart>
+    <libpart lib="Device" part="CP1">
+      <description>Polarized capacitor, US symbol</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>CP_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">CP1</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
     <libpart lib="Device" part="LED">
       <description>Light emitting diode</description>
       <docs>~</docs>
@@ -1931,7 +2039,14 @@
       <node ref="C16" pin="2" pintype="passive"/>
       <node ref="C17" pin="1" pintype="passive"/>
       <node ref="C18" pin="1" pintype="passive"/>
+      <node ref="C19" pin="2" pintype="passive"/>
       <node ref="C2" pin="1" pintype="passive"/>
+      <node ref="C20" pin="1" pintype="passive"/>
+      <node ref="C21" pin="2" pintype="passive"/>
+      <node ref="C22" pin="2" pintype="passive"/>
+      <node ref="C23" pin="2" pintype="passive"/>
+      <node ref="C24" pin="2" pintype="passive"/>
+      <node ref="C25" pin="2" pintype="passive"/>
       <node ref="C3" pin="2" pintype="passive"/>
       <node ref="C4" pin="2" pintype="passive"/>
       <node ref="C5" pin="2" pintype="passive"/>
@@ -2246,6 +2361,13 @@
       <node ref="U5" pin="8" pinfunction="VBUS" pintype="input"/>
     </net>
     <net code="65" name="VDC">
+      <node ref="C19" pin="1" pintype="passive"/>
+      <node ref="C20" pin="2" pintype="passive"/>
+      <node ref="C21" pin="1" pintype="passive"/>
+      <node ref="C22" pin="1" pintype="passive"/>
+      <node ref="C23" pin="1" pintype="passive"/>
+      <node ref="C24" pin="1" pintype="passive"/>
+      <node ref="C25" pin="1" pintype="passive"/>
       <node ref="C4" pin="1" pintype="passive"/>
       <node ref="C5" pin="1" pintype="passive"/>
       <node ref="C6" pin="1" pintype="passive"/>
