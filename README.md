@@ -66,7 +66,7 @@ On board MOSFETs can be used to switch or PWM dim loads up to 75 W. Uses include
 
 - Used FET = AO3400A
 - Imax per FET = 3 A
-- Imax over all FETs = 5 A
+- Imax over all FETs = 5 A 
 - U = 12 - 24 V
 
 ## IR
