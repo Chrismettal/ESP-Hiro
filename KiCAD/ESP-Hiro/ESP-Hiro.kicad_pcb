@@ -42,7 +42,8 @@
       (copper_finish "None")
       (dielectric_constraints no)
     )
-    (pad_to_mask_clearance 0)
+    (pad_to_mask_clearance 0.05)
+    (solder_mask_min_width 0.2)
     (grid_origin 112 83)
     (pcbplotparams
       (layerselection 0x00010fc_ffffffff)
