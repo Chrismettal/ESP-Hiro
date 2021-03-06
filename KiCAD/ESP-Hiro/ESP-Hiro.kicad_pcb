@@ -1,4 +1,4 @@
-(kicad_pcb (version 20210126) (generator pcbnew)
+(kicad_pcb (version 20210228) (generator pcbnew)
 
   (general
     (thickness 1.6)
@@ -29,6 +29,7 @@
   )
 
   (setup
+    (pad_to_mask_clearance 0)
     (grid_origin 200 80)
     (pcbplotparams
       (layerselection 0x00010fc_ffffffff)
@@ -10081,7 +10082,7 @@
     (pts (xy 97.6 79.56) (xy 100 80))
     (height 8.76)
     (orientation 0)
-    (gr_text "2.4000 mm" (at 98.8 69.65) (layer "Dwgs.User") (tstamp ac97532b-1ff8-4cf2-a21d-722d83f707bb)
+    (gr_text "2.4000 mm" (at 98.8 89.47) (layer "Dwgs.User") (tstamp 60c29cfa-99bd-46bb-ac41-a6e71e7c97cd)
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (format (units 3) (units_format 1) (precision 4))

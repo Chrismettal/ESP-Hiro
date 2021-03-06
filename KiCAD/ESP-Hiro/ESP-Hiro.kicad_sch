@@ -6462,7 +6462,7 @@
     (property "Reference" "J5_1" (id 0) (at 391.16 191.77 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Value" "Conn_Q1_M" (id 1) (at 394.97 198.12 0)
+    (property "Value" "Conn_Q5_M" (id 1) (at 394.97 198.12 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Footprint" "" (id 2) (at 386.08 194.31 0)
@@ -7891,7 +7891,7 @@
     (property "Datasheet" "https://datasheet.lcsc.com/szlcsc/1811190209_SILICON-LABS-CP2102N-A01-GQFN28_C105167.pdf" (id 3) (at 110.49 138.43 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "LCSC" " C105167" (id 4) (at 109.22 119.38 0)
+    (property "LCSC" "C105167" (id 4) (at 109.22 119.38 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 1f4ccd11-8d6e-44d4-8614-5262f8104bbf))
@@ -8299,7 +8299,7 @@
       (reference "J4_1") (unit 1) (value "Conn_Q4_M") (footprint "")
     )
     (path "/dd0e1294-683a-4b3e-ba92-5400f464d1ee"
-      (reference "J5_1") (unit 1) (value "Conn_Q1_M") (footprint "")
+      (reference "J5_1") (unit 1) (value "Conn_Q5_M") (footprint "")
     )
     (path "/a8d314f5-da2a-4a1d-8368-f2deebd6235f"
       (reference "J8_1") (unit 1) (value "J_DC_M") (footprint "")
