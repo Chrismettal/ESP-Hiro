@@ -117,7 +117,8 @@
         "min_via_diameter": 0.39999999999999997
       },
       "track_widths": [
-        0.0
+        0.0,
+        0.5
       ],
       "via_dimensions": [
         {
@@ -399,6 +400,7 @@
           "+3V3",
           "+5V",
           "GND",
+          "Net-(C11-Pad1)",
           "VBUS"
         ],
         "pcb_color": "rgba(0, 0, 0, 0.000)",
@@ -464,7 +466,7 @@
   },
   "sheets": [
     [
-      "822f3da2-9c63-4e99-acde-9d31e44771b2",
+      "ce75785c-6ed2-4ea7-9510-ee5d7cd14ef3",
       ""
     ]
   ],
