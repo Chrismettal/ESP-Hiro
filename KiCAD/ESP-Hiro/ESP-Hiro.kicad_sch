@@ -7776,7 +7776,7 @@
     (uuid 00000000-0000-0000-0000-00006029c388)
     (property "Reference" "J9" (id 0) (at 232.41 116.84 0))
     (property "Value" "DHT22/DS18B20 header" (id 1) (at 213.36 109.22 0))
-    (property "Footprint" "MeineBib:CixiKefa_KF2EDGK_2.54_4xPlug" (id 2) (at 228.6 134.62 0)
+    (property "Footprint" "MeineBib:CixiKefa_KF2EDGV_2.54_4xSocket" (id 2) (at 228.6 134.62 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "http://akizukidenshi.com/download/ds/aosong/DHT11.pdf" (id 3) (at 224.79 118.11 0)
@@ -8248,7 +8248,7 @@
       (reference "J8") (unit 1) (value "J_DC_F") (footprint "MeineBib:Cixi_Kefa_Elec_KF2EDGR-5.08-2P")
     )
     (path "/00000000-0000-0000-0000-00006029c388"
-      (reference "J9") (unit 1) (value "DHT22/DS18B20 header") (footprint "MeineBib:CixiKefa_KF2EDGK_2.54_4xPlug")
+      (reference "J9") (unit 1) (value "DHT22/DS18B20 header") (footprint "MeineBib:CixiKefa_KF2EDGV_2.54_4xSocket")
     )
     (path "/648127e4-48e7-4a15-b479-79d534050d9f"
       (reference "J10") (unit 1) (value "433_F") (footprint "MeineBib:CixiKefa_KF2EDGV_2.54_4xSocket")
