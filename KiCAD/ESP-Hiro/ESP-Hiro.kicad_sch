@@ -7449,7 +7449,7 @@
   (symbol (lib_id "Jumper:SolderJumper_3_Open") (at 220.98 54.61 90) (unit 1)
     (in_bom no) (on_board yes)
     (uuid b8b113c1-493d-4577-98b6-0dda32df8725)
-    (property "Reference" "JP3" (id 0) (at 216.789 53.461 90)
+    (property "Reference" "A0" (id 0) (at 216.789 53.461 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "PCF_A0" (id 1) (at 216.789 55.759 90)
@@ -7469,7 +7469,7 @@
   (symbol (lib_id "Jumper:SolderJumper_3_Open") (at 227.33 62.23 90) (unit 1)
     (in_bom no) (on_board yes)
     (uuid 9baa769e-8dc4-4e22-b59f-439c17a5f07b)
-    (property "Reference" "JP4" (id 0) (at 216.789 61.081 90)
+    (property "Reference" "A1" (id 0) (at 216.789 61.081 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "PCF_A1" (id 1) (at 216.789 63.379 90)
@@ -7489,7 +7489,7 @@
   (symbol (lib_id "Jumper:SolderJumper_3_Open") (at 233.68 69.85 90) (unit 1)
     (in_bom no) (on_board yes)
     (uuid c67bfe25-89f2-46b6-a965-a25a968154a3)
-    (property "Reference" "JP5" (id 0) (at 216.789 68.701 90)
+    (property "Reference" "A2" (id 0) (at 216.789 68.701 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "PCF_A2" (id 1) (at 216.789 70.999 90)
@@ -8083,6 +8083,15 @@
     (path "/00000000-0000-0000-0000-00006035ea42"
       (reference "#PWR053") (unit 1) (value "GND") (footprint "")
     )
+    (path "/b8b113c1-493d-4577-98b6-0dda32df8725"
+      (reference "A0") (unit 1) (value "PCF_A0") (footprint "Jumper:SolderJumper-3_P2.0mm_Open_TrianglePad1.0x1.5mm")
+    )
+    (path "/9baa769e-8dc4-4e22-b59f-439c17a5f07b"
+      (reference "A1") (unit 1) (value "PCF_A1") (footprint "Jumper:SolderJumper-3_P2.0mm_Open_TrianglePad1.0x1.5mm")
+    )
+    (path "/c67bfe25-89f2-46b6-a965-a25a968154a3"
+      (reference "A2") (unit 1) (value "PCF_A2") (footprint "Jumper:SolderJumper-3_P2.0mm_Open_TrianglePad1.0x1.5mm")
+    )
     (path "/00000000-0000-0000-0000-000060280798"
       (reference "C1") (unit 1) (value "100nF") (footprint "Capacitor_SMD:C_0603_1608Metric")
     )
@@ -8265,15 +8274,6 @@
     )
     (path "/895ee652-f131-45f9-955b-cc78db655350"
       (reference "JP2") (unit 1) (value "IR_R") (footprint "Jumper:SolderJumper-3_P2.0mm_Open_TrianglePad1.0x1.5mm")
-    )
-    (path "/b8b113c1-493d-4577-98b6-0dda32df8725"
-      (reference "JP3") (unit 1) (value "PCF_A0") (footprint "Jumper:SolderJumper-3_P2.0mm_Open_TrianglePad1.0x1.5mm")
-    )
-    (path "/9baa769e-8dc4-4e22-b59f-439c17a5f07b"
-      (reference "JP4") (unit 1) (value "PCF_A1") (footprint "Jumper:SolderJumper-3_P2.0mm_Open_TrianglePad1.0x1.5mm")
-    )
-    (path "/c67bfe25-89f2-46b6-a965-a25a968154a3"
-      (reference "JP5") (unit 1) (value "PCF_A2") (footprint "Jumper:SolderJumper-3_P2.0mm_Open_TrianglePad1.0x1.5mm")
     )
     (path "/babbbc79-a1a5-4702-afb7-167dcb2a7d3b"
       (reference "JP6") (unit 1) (value "PCF8574_Enable") (footprint "Jumper:SolderJumper-2_P1.3mm_Open_TrianglePad1.0x1.5mm")
