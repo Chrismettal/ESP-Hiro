@@ -1,6 +1,4 @@
-# ESP-Hiro <!-- omit in toc --> 
-
-# 広 <!-- omit in toc --> 
+# ESP-Hiro 広 <!-- omit in toc -->
 
 - [What is this?](#what-is-this)
 - [Pin tables](#pin-tables)
