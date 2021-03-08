@@ -2,7 +2,7 @@
 <export version="E">
   <design>
     <source>C:\GitLocal\ESP-Hiro\KiCAD\ESP-Hiro\ESP-Hiro.kicad_sch</source>
-    <date>07/03/2021 18:44:02</date>
+    <date>08/03/2021 10:46:12</date>
     <tool>Eeschema (5.99.0-9568-gb9d26a55f2)</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -1315,12 +1315,11 @@
     <comp ref="U2">
       <value>CP2102N-A01-GQFN28</value>
       <footprint>Package_DFN_QFN:QFN-28-1EP_5x5mm_P0.5mm_EP3.35x3.35mm</footprint>
-      <datasheet>https://datasheet.lcsc.com/szlcsc/1811190209_SILICON-LABS-CP2102N-A01-GQFN28_C105167.pdf</datasheet>
       <fields>
-        <field name="LCSC">C105167</field>
+        <field name="LCSC">C6568</field>
       </fields>
       <libsource lib="Interface_USB" part="CP2102N-Axx-xQFN28" description="USB to UART master bridge, QFN-28"/>
-      <property name="LCSC" value="C105167"/>
+      <property name="LCSC" value="C6568"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="ESP-Hiro.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
