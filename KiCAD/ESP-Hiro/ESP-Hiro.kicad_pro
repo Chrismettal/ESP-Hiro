@@ -432,8 +432,8 @@
       "idf": "",
       "netlist": "ESP-Hiro.net",
       "specctra_dsn": "",
-      "step": "",
-      "vrml": ""
+      "step": "ESP-Hiro.step",
+      "vrml": "ESP-Hiro.wrl"
     },
     "page_layout_descr_file": ""
   },
