@@ -14,7 +14,9 @@
 
 # What is this?
 
-THIS!
+This is a Tasmota compatible dimmer/actuator/sensor and general purpose smart home interface board to either make various devices smart or create new ones. Typical uses include RGBW dimming, single/multi room heating control, even automating plants!
+
+ESP-Hiro has multiple interfaces directly on board which allow you to connect almost anything you would want to have automated. Some parts like a DHT22 or an IR blaster are basically pre-wired on board, all of the ESP8266's usable GPIO are broken out to plugs/sockets, and since the board was (and still is) pretty empty I've thrown in a PCF8574 port expander in case you might think of a usecase with more pins than the ESP has. 
 
 # Pin tables
 
@@ -29,10 +31,9 @@ This table shows the hardware that is enabled on the PCB right away. Obviously o
 | Deep Sleep         |              |            |            |                |             |             |    Disable    |        RST         |       |
 | ADC                |              |            |            |                |             |             |               |                    |   X   |
 | 433Mhz Transmitter |              |            |            |                |             |             |       X       |                    |       |
-| PWM                |              |            |            |                |             |             |               |                    |       |
 | AM2302/DHT22       |      X       |            |            |                |             |             |               |                    |       |
 | DS18x20            |      X       |            |            |                |             |             |               |                    |       |
-| 2.5 A MOSFET PWM      |              |            |            |      Ch1       |     Ch2     |     Ch3     |      Ch4      | Ch5 (HIGH AT BOOT) |       |
+| 2.5 A MOSFET PWM   |              |            |            |      Ch1       |     Ch2     |     Ch3     |      Ch4      | Ch5 (HIGH AT BOOT) |       |
 | IR Transmitter     |              |            |            |                |             |             |               |         IR         |       |
 | PCF8574            |              |    SDA     |    SCL     | `INT (jumper)` |             |             |               |                    |       |
 
