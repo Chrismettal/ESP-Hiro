@@ -13,6 +13,7 @@
   - [I²C](#ic)
     - [PCF8574](#pcf8574)
     - [Temperature Sensors](#temperature-sensors)
+    - [433MHz](#433mhz)
     - [Other](#other)
 - [Software](#software)
   - [Tasmota](#tasmota)
@@ -123,6 +124,12 @@ Right now Tasmota only supports "relay outputs" for PCF8574, but GPIO12 can be c
 ![Temp](img/Temp.png)
 
 While you can use any temperature sensor supported by Tasmota, the two predefined variants are DHT22 and DS18B20 type sensors. Both are defined to go on `J9? and use `GPIO02`.
+
+### 433MHz
+
+![433](img/433.png)
+
+A 433MHz antenna can be plugged straight onto J10, using pin 2-4, which will use GPIO15 for the RC-Switch library.
 
 ### Other
 
