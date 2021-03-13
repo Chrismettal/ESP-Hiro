@@ -1,5 +1,7 @@
 # ESP-Hiro 広 <!-- omit in toc -->
 
+![Board](img/Nice.png)
+
 - [What is this?](#what-is-this)
 - [Pin tables](#pin-tables)
   - [Devices](#devices)
@@ -19,9 +21,13 @@
   - [Building my own](#building-my-own)
   - [Buying](#buying)
   - [Power supply](#power-supply)
+  - [Jumpers](#jumpers)
+    - [V-USB -> +5V](#v-usb---5v)
+    - [PCF8574](#pcf8574-1)
+    - [IR resistor](#ir-resistor)
+    - [Deep sleep](#deep-sleep)
   - [Uploading the Firmware](#uploading-the-firmware)
-
-![Board](img/FinishedBoard.png)
+- [Tools used](#tools-used)
 
 # What is this?
 
@@ -74,6 +80,8 @@ This table shows the hardware that is enabled on the PCB right away. Obviously o
 
 ## MOSFETs
 
+![FET](img/FET.png)
+
 On board MOSFETs can be used to switch or PWM dim loads up to 75 W. Uses include RGB-WW-CW LEDs, heating actuators, small motors/pumps etc. The board can supply 5 A overall, every FET individually can provide up to 2.5 A. Q5 WILL be high at boot, so LEDs connected to this FET will blink once during initial powerup of the board!
 
 - Used FET = AO3400A
@@ -81,36 +89,34 @@ On board MOSFETs can be used to switch or PWM dim loads up to 75 W. Uses include
 - Imax over all FETs = 5 A 
 - U = 12 - 24 V
 
-![FET](img/FET.png)
-
 ## IR
+
+![IRJack](img/IR.png)
 
 A header for an IR blaster is present, connected via the MOSFET Q5. It is supplied by 5 V via a jumper configurable current limit resistor of `180 Ohms / 33 Ohms` which works out to around `20 mA / 100 mA` depending on your diodes forward voltage.
 
 `!WATCH OUT!` if you attempt to use an IR LED on J15 and a 24 V device on J5 at the same time you will find that you are connecting the 24 V rail to the 5 V rail through your devices and you will NOT have a fun day! Use ONLY an IR blaster OR a 24 V device at J5!
 
-![IRJack](img/IR.png)
-
 ## Relays
 
-![RelayBoard](img/RelayBoard.png)
+![RelayBoard](img/RelayBoard.jpg)
 
 These relay boards can be connected to basically any GPIO from the pin table you want, but you need to disconnect "JD-VCC" jumper and supply 3.3 V to JD so you don't feed 5 V back into the ESP. They can also be connected to the PCF8574 expander header outputs if configured accordingly.
 
 ## I²C
 
+![I2C](img/I2C.png)
+
 - `SDA = GPIO4`
 - `SCL = GPIO5`
-
-![I2C](img/I2C.png)
 
 Any I²C devices supported by Tasmota will work, but remember that some devices already include pullup resistors that need to be removed. For example HD44780 LCDs with PCF8574 I²C backpacks will pull up the I²C lines to 5 V, which could damage the ESP and is not needed since I²C is already pulled up to 3.3 V on ESP-Hiro.
 
 ### PCF8574
 
-Right now Tasmota only supports "relay outputs" for PCF8574, but GPIO12 can be connected to the expander interrupt pin with a jumper for future input application. Beware that this needs to apply a pullup to GPIO12 with will turn Q1 on! The address of the PCF8574 has to be set with 3 jumpers as well.
-
 ![PCF](img/PCF.png)
+
+Right now Tasmota only supports "relay outputs" for PCF8574, but GPIO12 can be connected to the expander interrupt pin with a jumper for future input application. Beware that this needs to apply a pullup to GPIO12 with will turn Q1 on! The address of the PCF8574 has to be set with 3 jumpers as well.
 
 ### Temperature Sensors
 
@@ -141,6 +147,8 @@ Obviously as this is basically another ESP8266 devboard you can code your own so
 
 As this project is fully open sourced you can obviously make your own boards. The whole board is made to be manufactured by JLCPCB and uses their LCSC parts libraries in the BOM. Using the manufacturing files inside the `KiCAD` folder you can have them build the populated PCB for you, but obviously you can just do them by hand if you want! Obviously SMD soldering skills will be required especially for the USB-C terminal, and parts like the CP2102 are best done with a hot air gun, but these two parts aren't even required if you don't plan to upload code via USB.
 
+Right now there is no build guide for soldering one yourself since this was an exercise in design for manufacturing, specifically to get a fully working module delivered from a PCBA house. 
+
 ## Buying
 
 I am in the process of setting up a tindie store or similar and will link it here if you are interested to buy a finished board!
@@ -159,8 +167,38 @@ To supply the unit via 5 V you can use either the USB Jack or via J10:
 
 The designed current for this board is a maximum of 5 A through the 24 V terminal, which provides you up to 120 W of dimming power, which is plenty for most at-home LED dimming uses. At least for me. 
 
-Using the 3V3 header also works to supply the ESP, but the IR LED for example won't work anymore as it is supplied by 5 V
+Using the 3V3 header also works to supply the ESP, but the IR LED for example won't work anymore as it is supplied by 5 V.
+
+## Jumpers
+
+![Jumpers](img/Jumpers.png)
+
+All jumpers are on the bottom side of the board.
+
+### V-USB -> +5V
+
+This jumper can be used to short out the protection diode between USB and the 5 V rail if you are only using the USB to supply the board. Might save some power for very low power applications and prevents some voltage drop for the IR blaster for example.
+
+### PCF8574
+
+JP6 and JP8 have to be shorted to enable the PCF at all and you will have to set a free address with A0 - A2.
+
+### IR resistor
+
+With JP2 you can choose the current limiting resistor before your IR blaster LED. Shorting the left side yields around 20mA LED current, while the right side yields around 100mA, depending on your diode.
+
+### Deep sleep
+
+Deep sleep will only work if this jumper is bridged. It connects `GPIO16` to the reset line.
 
 ## Uploading the Firmware
 
 You best check out the official Tasmota guides for this, as it won't differ from any other ESP8266 board. There is a CP2102 serial converter behind the USB jack so for most systems the board will be plug-and-play to upload via USB. The serial design generally mimics the NodeMCU way of things. TXD and RXD pins are NOT broken out to headers so if you want to upload code without USB you would have to solder directly to the generous pins of the ESP directly!
+
+# Tools used
+
+The schematic, PCB and screenshot renders were done in __[KiCAD](https://kicad.org/)__, specifically using the nightly build `5.99.0-8805-ge26c912b86`. The whole KiCAD project, all design files and manufacturing outputs are found under the KiCAD folder, including the schematic etc.
+
+All the 3d printable files are done in __[FreeCAD](https://www.freecadweb.org/)__ 0.19. Find all 3d printable files in the FreeCAD folder as well as on __[Prusaprinters.org](https://www.prusaprinters.org/social/13425-chrismettal/prints)__. 
+
+Models are printed on __[Prusa](https://www.prusa3d.com/)__ MK3s printers and sliced with Prusaslicer. 
