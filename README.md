@@ -4,13 +4,24 @@
 - [Pin tables](#pin-tables)
   - [Devices](#devices)
   - [Example builds](#example-builds)
-- [Hardware](#hardware)
+- [Defined I/O](#defined-io)
   - [MOSFETs](#mosfets)
   - [IR](#ir)
   - [Relays](#relays)
-    - [Board](#board)
   - [I²C](#ic)
     - [PCF8574](#pcf8574)
+    - [Temperature Sensors](#temperature-sensors)
+    - [Other](#other)
+- [Software](#software)
+  - [Tasmota](#tasmota)
+  - [Other](#other-1)
+- [Build / use](#build--use)
+  - [Building my own](#building-my-own)
+  - [Buying](#buying)
+  - [Power supply](#power-supply)
+  - [Uploading the Firmware](#uploading-the-firmware)
+
+![Board](img/FinishedBoard.png)
 
 # What is this?
 
@@ -59,24 +70,28 @@ This table shows the hardware that is enabled on the PCB right away. Obviously o
 | -                  |         |                        |                        |                |                     |                |              |             |               |
 
 
-# Hardware
+# Defined I/O
 
 ## MOSFETs
 
-On board MOSFETs can be used to switch or PWM dim loads up to 75 W. Uses include RGB-WW-CW LEDs, heating actuators, small motors/pumps etc. The board can supply 5 A overall, every FET individually can provide up to 2.5 A. 
+On board MOSFETs can be used to switch or PWM dim loads up to 75 W. Uses include RGB-WW-CW LEDs, heating actuators, small motors/pumps etc. The board can supply 5 A overall, every FET individually can provide up to 2.5 A. Q5 WILL be high at boot, so LEDs connected to this FET will blink once during initial powerup of the board!
 
 - Used FET = AO3400A
 - Imax per FET = 2.5 A
 - Imax over all FETs = 5 A 
 - U = 12 - 24 V
 
+![FET](img/FET.png)
+
 ## IR
 
 A header for an IR blaster is present, connected via the MOSFET Q5. It is supplied by 5 V via a jumper configurable current limit resistor of `180 Ohms / 33 Ohms` which works out to around `20 mA / 100 mA` depending on your diodes forward voltage.
 
-## Relays
+`!WATCH OUT!` if you attempt to use an IR LED on J15 and a 24 V device on J5 at the same time you will find that you are connecting the 24 V rail to the 5 V rail through your devices and you will NOT have a fun day! Use ONLY an IR blaster OR a 24 V device at J5!
 
-### Board
+![IRJack](img/IR.png)
+
+## Relays
 
 ![RelayBoard](img/RelayBoard.png)
 
@@ -87,8 +102,65 @@ These relay boards can be connected to basically any GPIO from the pin table you
 - `SDA = GPIO4`
 - `SCL = GPIO5`
 
+![I2C](img/I2C.png)
+
 Any I²C devices supported by Tasmota will work, but remember that some devices already include pullup resistors that need to be removed. For example HD44780 LCDs with PCF8574 I²C backpacks will pull up the I²C lines to 5 V, which could damage the ESP and is not needed since I²C is already pulled up to 3.3 V on ESP-Hiro.
 
 ### PCF8574
 
 Right now Tasmota only supports "relay outputs" for PCF8574, but GPIO12 can be connected to the expander interrupt pin with a jumper for future input application. Beware that this needs to apply a pullup to GPIO12 with will turn Q1 on! The address of the PCF8574 has to be set with 3 jumpers as well.
+
+![PCF](img/PCF.png)
+
+### Temperature Sensors
+
+![Temp](img/Temp.png)
+
+While you can use any temperature sensor supported by Tasmota, the two predefined variants are DHT22 and DS18B20 type sensors. Both are defined to go on `J9? and use `GPIO02`.
+
+### Other
+
+Tasmota does way more than I anticipated so you can use everything that Tasmota provides, even if not specifically defined here. This just happens to be the stuff I regularly use.
+
+# Software
+
+## Tasmota
+
+![Tasmota](img/Tasmota.png)
+
+Under /Tasmota/tasmota-ESP-Hiro/ you will find a precompiled `firmware.bin` built for use with ESP-Hiro, as well as a user_config_override.h file so that you can edit your build to your preferences or usecase.
+Using the override file requires you to clone the Tasmota repo and placing the override file inside the `/tasmota/` folder there. 
+
+## Other
+
+Obviously as this is basically another ESP8266 devboard you can code your own software in any language you want. The original design of ESP-Hiro was programmed with Arduino but that made it very "hardcoded to my own home" and not flexible enough for publishing. Tasmota is what sparked the idea of a publishable refresh so just use that!
+
+# Build / use
+
+## Building my own
+
+As this project is fully open sourced you can obviously make your own boards. The whole board is made to be manufactured by JLCPCB and uses their LCSC parts libraries in the BOM. Using the manufacturing files inside the `KiCAD` folder you can have them build the populated PCB for you, but obviously you can just do them by hand if you want! Obviously SMD soldering skills will be required especially for the USB-C terminal, and parts like the CP2102 are best done with a hot air gun, but these two parts aren't even required if you don't plan to upload code via USB.
+
+## Buying
+
+I am in the process of setting up a tindie store or similar and will link it here if you are interested to buy a finished board!
+
+## Power supply
+
+The PCB can be easily supplied via 5 V or 12-24 V depending on your usecase. Only the MOSFETs are exclusively supplied through the 12-24 V DC input, everything else will work on 5 V as well.
+
+To supply the unit via 5 V you can use either the USB Jack or via J10:
+
+![5V](img/5V.png)
+
+12-24 V are supplied via either the barrel jack J7 or the screw-plug terminal J8:
+
+![24V](img/24V.png)
+
+The designed current for this board is a maximum of 5 A through the 24 V terminal, which provides you up to 120 W of dimming power, which is plenty for most at-home LED dimming uses. At least for me. 
+
+Using the 3V3 header also works to supply the ESP, but the IR LED for example won't work anymore as it is supplied by 5 V
+
+## Uploading the Firmware
+
+You best check out the official Tasmota guides for this, as it won't differ from any other ESP8266 board. There is a CP2102 serial converter behind the USB jack so for most systems the board will be plug-and-play to upload via USB. The serial design generally mimics the NodeMCU way of things. TXD and RXD pins are NOT broken out to headers so if you want to upload code without USB you would have to solder directly to the generous pins of the ESP directly!
