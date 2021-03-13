@@ -90,6 +90,78 @@ Examples :
 // !!! Remember that your changes GOES AT THE BOTTOM OF THIS FILE right before the last #endif !!! 
 */
 
+// undefining stuff to make more room
+
+/* EXAMPLE
+#ifdef USE_UNCOOL_STUFF
+#undef USE_UNCOOL_STUFF
+#endif
+*/
+
+// defining new, cooler stuff
+
+// Add support for DS18x20 sensors with id sort, single scan and read retry (+2k6 code)
+#ifndef USE_DS18x20
+#define USE_DS18x20
+#endif
+#ifndef DS18X20_PULL_UP
+#define DS18X20_PULL_UP
+#endif
+
+// I2C using library wire (+10k code, 0k2 mem, 124 iram)
+#ifndef USE_I2C
+#define USE_I2C
+#endif
+
+//[I2cDriver11] Enable BH1750 sensor (I2C address 0x23 or 0x5C) (+0k5 code)
+#ifndef USE_BH1750      
+#define USE_BH1750
+#endif
+
+// [I2cDriver17] Enable Xadow and Grove Mutichannel Gas sensor using library Multichannel_Gas_Sensor (+10k code)
+#ifndef USE_MGS         
+#define USE_MGS
+#endif
+
+// [I2cDriver2] Enable PCF8574 I/O Expander (I2C addresses 0x20 - 0x26 and 0x39 - 0x3F) (+1k9 code)
+#ifndef USE_PCF8574     
+#define USE_PCF8574
+#endif
+#ifndef USE_PCF8574_SENSOR
+#define USE_PCF8574_SENSOR
+#endif
+#ifndef USE_PCF8574_DISPLAYINPUT
+#define USE_PCF8574_DISPLAYINPUT
+#endif
+
+// Add I2C Display Support (+2k code)
+#ifndef USE_DISPLAY
+#define USE_DISPLAY
+#endif
+
+// Add support for DHT11, AM2301 (DHT21, DHT22, AM2302, AM2321) and SI7021 Temperature and Humidity sensor (1k6 code)
+#ifndef USE_DHT
+#define USE_DHT
+#endif
+
+// Send IR remote commands using library IRremoteESP8266 and ArduinoJson (+4k3 code, 0k3 mem, 48 iram)
+#ifndef USE_IR_REMOTE
+#define USE_IR_REMOTE
+#endif
+#ifdef USE_IR_RECEIVE
+#undef USE_IR_RECEIVE
+#endif
+
+// Add support for Thermostat
+#ifndef USE_THERMOSTAT
+#define USE_THERMOSTAT
+#endif
+#define THERMOSTAT_SENSOR_NAME "DHT22"
+
+// Add support for RF transceiver using library RcSwitch (+2k7 code, 460 iram)
+#ifndef USE_RC_SWITCH
+#define USE_RC_SWITCH
+#endif
 
 
 #endif  // _USER_CONFIG_OVERRIDE_H_
