@@ -154,7 +154,7 @@ Obviously as this is basically another ESP8266 devboard you can code your own so
 
 As this project is fully open sourced you can obviously make your own boards. The whole board is made to be manufactured by JLCPCB and uses their LCSC parts libraries in the BOM. Using the manufacturing files inside the `KiCAD` folder you can have them build the populated PCB for you, but obviously you can just do them by hand if you want! Obviously SMD soldering skills will be required especially for the USB-C terminal, and parts like the CP2102 are best done with a hot air gun, but these two parts aren't even required if you don't plan to upload code via USB.
 
-Right now there is no build guide for soldering one yourself since this was an exercise in design for manufacturing, specifically to get a fully working module delivered from a PCBA house. 
+Right now there is no build guide for soldering one yourself since this was an exercise in design for manufacturing, specifically to get a fully working module delivered from the PCBA house. 
 
 ## Buying
 
@@ -204,7 +204,7 @@ You best check out the official Tasmota guides for this, as it won't differ from
 
 # Tools used
 
-The schematic, PCB and screenshot renders were done in __[KiCAD](https://kicad.org/)__, specifically using the nightly build `5.99.0-8805-ge26c912b86`. The whole KiCAD project, all design files and manufacturing outputs are found under the KiCAD folder, including the schematic etc.
+The schematic, PCB and screenshot renders were done in __[KiCAD](https://kicad.org/)__, specifically using the nightly build `5.99.0-10216-g675444a646`. The whole KiCAD project, all design files and manufacturing outputs are found under the KiCAD folder, including the schematic etc.
 
 All the 3d printable files are done in __[FreeCAD](https://www.freecadweb.org/)__ 0.20 dev versions. Find all 3d printable files in the FreeCAD folder as well as on __[Prusaprinters.org](https://www.prusaprinters.org/social/13425-chrismettal/prints)__. 
 
