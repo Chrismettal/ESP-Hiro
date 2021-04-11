@@ -206,6 +206,6 @@ You best check out the official Tasmota guides for this, as it won't differ from
 
 The schematic, PCB and screenshot renders were done in __[KiCAD](https://kicad.org/)__, specifically using the nightly build `5.99.0-8805-ge26c912b86`. The whole KiCAD project, all design files and manufacturing outputs are found under the KiCAD folder, including the schematic etc.
 
-All the 3d printable files are done in __[FreeCAD](https://www.freecadweb.org/)__ 0.19. Find all 3d printable files in the FreeCAD folder as well as on __[Prusaprinters.org](https://www.prusaprinters.org/social/13425-chrismettal/prints)__. 
+All the 3d printable files are done in __[FreeCAD](https://www.freecadweb.org/)__ 0.20 dev versions. Find all 3d printable files in the FreeCAD folder as well as on __[Prusaprinters.org](https://www.prusaprinters.org/social/13425-chrismettal/prints)__. 
 
 Models are printed on __[Prusa](https://www.prusa3d.com/)__ MK3s printers and sliced with Prusaslicer. 
