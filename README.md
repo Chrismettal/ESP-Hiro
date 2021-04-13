@@ -190,8 +190,10 @@ Using the 3V3 header also works to supply the ESP, but the IR LED for example wo
 ![Jumpers](img/jumpers.png)
 
 All jumpers are on the bottom side of the board. 
-To use the PCF8574 you will have to set an I²C address on the three jumpers labled A0 - A2 as well as bridge both marked jumpers to power on the PCF (JP6) and connecting the interrupt line (JP8, not strictly required if only outputs are used).
 
+- To use the PCF8574 you will have to set an I²C address on the three jumpers labled A0 - A2 as well as bridge both marked jumpers to power on the PCF (JP6) and connecting the interrupt line (JP8, not strictly required if only outputs are used).
+- To use an IR blaster configure the LED current through one of the two jumpers at JP2 to around 100mA / 20mA.
+- To use DeepSleep you will need to bridge the labeled jumper to connect GPIO16 to RST
 
 ### V-USB -> +5V
 
