@@ -19,6 +19,7 @@
   - [Tasmota](#tasmota)
   - [Other](#other-1)
 - [Build / use](#build--use)
+  - [Mechanical](#mechanical)
   - [Building my own](#building-my-own)
   - [Buying](#buying)
   - [Power supply](#power-supply)
@@ -150,6 +151,14 @@ Obviously as this is basically another ESP8266 devboard you can code your own so
 
 # Build / use
 
+## Mechanical
+
+![Mechanical](img/Mechanical.png)
+
+This is the mechanical drawing. Under the KiCAD folder /renders you will also find the STEP file for the whole board which makes it easier to design your case around it.
+The screwholes are 2.75mm for 2.5mm screws to pass.
+Walls around board should be 2mm thick, with 0.2mm space between the board and the wall for the 5.08mm plugs to fit nicely.
+
 ## Building my own
 
 As this project is fully open sourced you can obviously make your own boards. The whole board is made to be manufactured by JLCPCB and uses their LCSC parts libraries in the BOM. Using the manufacturing files inside the `KiCAD` folder you can have them build the populated PCB for you, but obviously you can just do them by hand if you want! Obviously SMD soldering skills will be required especially for the USB-C terminal, and parts like the CP2102 are best done with a hot air gun, but these two parts aren't even required if you don't plan to upload code via USB.
@@ -178,9 +187,11 @@ Using the 3V3 header also works to supply the ESP, but the IR LED for example wo
 
 ## Jumpers
 
-![Jumpers](img/Jumpers.png)
+![Jumpers](img/jumpers.png)
 
-All jumpers are on the bottom side of the board.
+All jumpers are on the bottom side of the board. 
+To use the PCF8574 you will have to set an I²C address on the three jumpers labled A0 - A2 as well as bridge both marked jumpers to power on the PCF (JP6) and connecting the interrupt line (JP8, not strictly required if only outputs are used).
+
 
 ### V-USB -> +5V
 
