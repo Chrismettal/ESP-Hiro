@@ -25,3 +25,7 @@ fp-info-cache
 
 # KiCad backup files
 *-backups/
+
+# FreeCAD backup files
+*.FCStd*
+!*.FCStd
