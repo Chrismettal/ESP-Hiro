@@ -5,7 +5,6 @@
 - [What is this?](#what-is-this)
 - [Pin tables](#pin-tables)
   - [Devices](#devices)
-  - [Example builds](#example-builds)
 - [Defined I/O](#defined-io)
   - [MOSFETs](#mosfets)
   - [IR](#ir)
@@ -20,6 +19,7 @@
   - [Other](#other-1)
 - [Build / use](#build--use)
   - [Mechanical](#mechanical)
+  - [3D printing](#3d-printing)
   - [Building my own](#building-my-own)
   - [Buying](#buying)
   - [Power supply](#power-supply)
@@ -55,17 +55,7 @@ This table shows the hardware that is enabled on the PCB right away. Obviously o
 | 2.5 A MOSFET PWM   |              |            |            |      Ch1       |     Ch2     |     Ch3     |      Ch4      | Ch5 (HIGH AT BOOT) |       |
 | IR Transmitter     |              |            |            |                |             |             |               |         IR         |       |
 | PCF8574            |              |    SDA     |    SCL     | `INT (jumper)` |             |             |               |                    |       |
-
-`GPIO0`   - always pulled HIGH, can't be LOW during boot
-
-`GPIO2`   - always pulled HIGH, can't be LOW during boot
-
-`GPIO15`  - always pulled to GND - can't be HIGH during boot
-
-`GPIO16`  - HIGH during boot, shared with deepsleep wakeup
-
-
-## Example builds
+I am in the process of setting up a tindie store or similar and will link it here if you are interested to buy a finished board!
 
 |                    | `GPIO2` |         GPIO4          |         GPIO5          |     GPIO12     |       GPIO13        |     GPIO14     |   `GPIO15`   |  `GPIO16`   |     `ADC`     |
 | ------------------ | :-----: | :--------------------: | :--------------------: | :------------: | :-----------------: | :------------: | :----------: | :---------: | :-----------: |
@@ -158,6 +148,14 @@ Obviously as this is basically another ESP8266 devboard you can code your own so
 This is the mechanical drawing. Under the KiCAD folder /renders you will also find the STEP file for the whole board which makes it easier to design your case around it.
 The screwholes are 2.75mm for 2.5mm screws to pass.
 Walls around board should be 2mm thick, with 0.2mm space between the board and the wall for the 5.08mm plugs to fit nicely.
+
+## 3D printing
+
+![3DParts](img/3Dparts.png)
+
+The FreeCAD project file (done in 0.20 dev versions) contains parametric design files for 4 different cases. There is one "Shoe" that only covers the bottom of the PCB, one "Slim" case exposing all connectors, and two "Thicc" cases, only exposing the side connectors. For these variants, printable stl files are exported in the FreeCAD/stl folder.
+
+All cuts and breakthroughs are done in the last steps of each body, so should choose to only populate one of the PWM jacks you can delete the "pocket" operations for the other PWM jacks. The same applies to the screwholes in the bottom as well as most other jacks.
 
 ## Building my own
 
