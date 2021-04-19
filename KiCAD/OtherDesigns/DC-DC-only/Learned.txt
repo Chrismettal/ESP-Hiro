@@ -1,1 +1,0 @@
-- PCB almost has the same size as LM25whatever DC-DC boards. If a new version is made for whatever reason, make size the same.
