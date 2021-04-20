@@ -13,6 +13,7 @@
     - [PCF8574](#pcf8574)
     - [Temperature Sensors](#temperature-sensors)
     - [433MHz](#433mhz)
+    - [ADC](#adc)
     - [Other](#other)
 - [Software](#software)
   - [Tasmota](#tasmota)
@@ -121,6 +122,10 @@ While you can use any temperature sensor supported by Tasmota, the two predefine
 ![433](img/433.png)
 
 A 433MHz antenna can be plugged straight onto J10, using pin 2-4, which will use GPIO15 for the RC-Switch library.
+
+### ADC
+
+The ADC has a voltage divider in place to measure 0 - 5 V over the 0 - 1023 ADC range
 
 ### Other
 
