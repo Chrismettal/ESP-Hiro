@@ -18,11 +18,11 @@
 - [Software](#software)
   - [Tasmota](#tasmota)
   - [Other](#other-1)
-- [Build / use](#build--use)
-  - [Mechanical](#mechanical)
-  - [3D printing](#3d-printing)
-  - [Building my own](#building-my-own)
+- [Build / aquire / use](#build--aquire--use)
   - [Buying](#buying)
+  - [Building my own](#building-my-own)
+  - [3D printing](#3d-printing)
+  - [Mechanical](#mechanical)
   - [Power supply](#power-supply)
   - [Jumpers](#jumpers)
     - [V-USB -> +5V](#v-usb---5v)
@@ -105,11 +105,17 @@ These relay boards can be connected to basically any GPIO from the pin table you
 
 Any I²C devices supported by Tasmota will work, but remember that some devices already include pullup resistors that need to be removed. For example HD44780 LCDs with PCF8574 I²C backpacks will pull up the I²C lines to 5 V, which could damage the ESP and is not needed since I²C is already pulled up to 3.3 V on ESP-Hiro.
 
+For all I²C devices you will have to enable the I²C driver once per command line with `I2Cdriver22 1`
+
 ### PCF8574
 
 ![PCF](img/PCF.png)
 
-Right now Tasmota only supports "relay outputs" for PCF8574, but GPIO12 can be connected to the expander interrupt pin with a jumper for future input application. Beware that this needs to apply a pullup to GPIO12 with will turn Q1 on! The address of the PCF8574 has to be set with 3 jumpers as well.
+Tasmota supports Inputs and Outputs over PCF8574 expanders, but to interrupt on input changes GPIO12 needs to be connected to the expander interrupt pin with JP8. Beware that this needs to apply a pullup to GPIO12 with will turn Q1 on! The address of the PCF8574 has to be set with 3 jumpers as well. JP6 enables the PCF at all. 
+
+Setting the following jumpers will enable the PCF including the interrupt pin, and set the PCF address to `0x39` which will be found by Tasmota:
+
+![PCFJumper](img/PCFJumpers.png)
 
 ### Temperature Sensors
 
@@ -144,15 +150,17 @@ Using the override file requires you to clone the Tasmota repo and placing the o
 
 Obviously as this is basically another ESP8266 devboard you can code your own software in any language you want. The original design of ESP-Hiro was programmed with Arduino but that made it very "hardcoded to my own home" and not flexible enough for publishing. Tasmota is what sparked the idea of a publishable refresh so just use that!
 
-# Build / use
+# Build / aquire / use
 
-## Mechanical
+## Buying
 
-![Mechanical](img/Mechanical.png)
+I have set up a store at https://www.tindie.com/stores/binary-6/ where I am currently gauging interest in this project. I will order a new set of V1.0.1 PCBs which I can sell as a (mostly assembled) kit. I also offer the printed cases as well.
 
-This is the mechanical drawing. Under the KiCAD folder /renders you will also find the STEP file for the whole board which makes it easier to design your case around it.
-The screwholes are 2.75mm for 2.5mm screws to pass.
-Walls around board should be 2mm thick, with 0.2mm space between the board and the wall for the 5.08mm plugs to fit nicely.
+## Building my own
+
+As this project is fully open sourced you can obviously make your own boards. The whole board is made to be manufactured by JLCPCB and uses their LCSC parts libraries in the BOM. Using the manufacturing files inside the `KiCAD` folder you can have them build the populated PCB for you, but obviously you can just do them by hand if you want! Obviously SMD soldering skills will be required especially for the USB-C terminal, and parts like the CP2102 are best done with a hot air gun, but these two parts aren't even required if you don't plan to upload code via USB.
+
+Right now there is no build guide for soldering one yourself since this was an exercise in design for manufacturing, specifically to get a fully working module delivered from the PCBA house. 
 
 ## 3D printing
 
@@ -162,15 +170,13 @@ The FreeCAD project file (done in 0.20 dev versions) contains parametric design 
 
 All cuts and breakthroughs are done in the last steps of each body, so should choose to only populate one of the PWM jacks you can delete the "pocket" operations for the other PWM jacks. The same applies to the screwholes in the bottom as well as most other jacks.
 
-## Building my own
+## Mechanical
 
-As this project is fully open sourced you can obviously make your own boards. The whole board is made to be manufactured by JLCPCB and uses their LCSC parts libraries in the BOM. Using the manufacturing files inside the `KiCAD` folder you can have them build the populated PCB for you, but obviously you can just do them by hand if you want! Obviously SMD soldering skills will be required especially for the USB-C terminal, and parts like the CP2102 are best done with a hot air gun, but these two parts aren't even required if you don't plan to upload code via USB.
+![Mechanical](img/Mechanical.png)
 
-Right now there is no build guide for soldering one yourself since this was an exercise in design for manufacturing, specifically to get a fully working module delivered from the PCBA house. 
-
-## Buying
-
-I am in the process of setting up a tindie store or similar and will link it here if you are interested to buy a finished board!
+This is the mechanical drawing. Under the KiCAD folder /renders you will also find the STEP file for the whole board which makes it easier to design your case around it.
+The screwholes are 2.75mm for 2.5mm screws to pass.
+Walls around board should be 2mm thick, with 0.2mm space between the board and the wall for the 5.08mm plugs to fit nicely.
 
 ## Power supply
 
@@ -204,7 +210,7 @@ This jumper can be used to short out the protection diode between USB and the 5 
 
 ### PCF8574
 
-JP6 and JP8 have to be shorted to enable the PCF at all and you will have to set a free address with A0 - A2.
+JP6 and has to be shorted to enable the PCF at all, JP8 will connect the PCF interrupt line to GPIO12 and you will have to set a free address with A0 - A2. I use `A0 HIGH ; A1 LOW ; A2 LOW` in my build
 
 ### IR resistor
 
@@ -220,8 +226,8 @@ You best check out the official Tasmota guides for this, as it won't differ from
 
 # Tools used
 
-The schematic, PCB and screenshot renders were done in __[KiCAD](https://kicad.org/)__, specifically using the nightly build `5.99.0-10216-g675444a646`. The whole KiCAD project, all design files and manufacturing outputs are found under the KiCAD folder, including the schematic etc.
+The schematic, PCB and screenshot renders were done in __[KiCAD](https://kicad.org/)__ 5.99 nightly builds. The whole KiCAD project, all design files and manufacturing outputs are found under the `PCB` folder, including the schematic etc.
 
-All the 3d printable files are done in __[FreeCAD](https://www.freecadweb.org/)__ 0.20 dev versions. Find all 3d printable files in the FreeCAD folder as well as on __[Prusaprinters.org](https://www.prusaprinters.org/social/13425-chrismettal/prints)__. 
+All the 3d printable files are done in __[FreeCAD](https://www.freecadweb.org/)__ 0.20 dev versions. Find all 3d printable files in the `3DPrinting` folder as well as on __[Prusaprinters.org](https://www.prusaprinters.org/social/13425-chrismettal/prints)__. 
 
 Models are printed on __[Prusa](https://www.prusa3d.com/)__ MK3s printers and sliced with Prusaslicer. 
