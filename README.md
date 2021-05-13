@@ -30,6 +30,7 @@
     - [IR resistor](#ir-resistor)
     - [Deep sleep](#deep-sleep)
   - [Uploading the Firmware](#uploading-the-firmware)
+  - [Templates](#templates)
 - [Tools used](#tools-used)
 
 # What is this?
@@ -223,6 +224,16 @@ Deep sleep will only work if this jumper is bridged. It connects `GPIO16` to the
 ## Uploading the Firmware
 
 You best check out the official Tasmota guides for this, as it won't differ from any other ESP8266 board. There is a CP2102 serial converter behind the USB jack so for most systems the board will be plug-and-play to upload via USB. The serial design generally mimics the NodeMCU way of things. TXD and RXD pins are NOT broken out to headers so if you want to upload code without USB you would have to solder directly to the generous pins of the ESP directly!
+
+## Templates
+
+Use this preconfigured base template that sets all broken out pins to "User" and allows you to create your own configuration out of the Module setting:
+
+`{"NAME":"ESP-Hiro_v1.0","GPIO":[0,0,1,0,1,1,0,0,1,1,1,1,1,1],"FLAG":0,"BASE":18}`
+
+A room controller dimmer template including all 5 PWM outputs, I²C enabled, a DHT22 temperature sensor and an ADC input would look like this:
+
+`{"NAME":"ESP-Hiro_v1.0_RoomDimmer","GPIO":[0,0,1216,0,640,608,0,0,416,417,418,419,420,4704],"FLAG":0,"BASE":18}`
 
 # Tools used
 
