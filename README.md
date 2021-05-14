@@ -144,7 +144,7 @@ Tasmota does way more than I anticipated so you can use everything that Tasmota 
 
 ![Tasmota](img/Tasmota.png)
 
-Under /Tasmota/tasmota-ESP-Hiro/ you will find a precompiled `firmware.bin` built for use with ESP-Hiro, as well as a user_config_override.h file so that you can edit your build to your preferences or usecase.
+Under `/Tasmota/tasmota-ESP-Hiro/` you will find a precompiled `firmware.bin` built for use with ESP-Hiro, as well as a user_config_override.h file so that you can edit your build to your preferences or usecase.
 Using the override file requires you to clone the Tasmota repo and placing the override file inside the `/tasmota/` folder there. 
 
 ## Other
