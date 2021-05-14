@@ -122,7 +122,7 @@ Setting the following jumpers will enable the PCF including the interrupt pin, a
 
 ![Temp](img/Temp.png)
 
-While you can use any temperature sensor supported by Tasmota, the two predefined variants are DHT22 and DS18B20 type sensors. Both are defined to go on `J9? and use `GPIO02`.
+While you can use any temperature sensor supported by Tasmota, the two predefined variants are DHT22 and DS18B20 type sensors. Both are defined to go on `J9` and use `GPIO02`.
 
 ### 433MHz
 
