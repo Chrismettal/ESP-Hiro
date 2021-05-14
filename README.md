@@ -57,7 +57,6 @@ This table shows the hardware that is enabled on the PCB right away. Obviously o
 | 2.5 A MOSFET PWM   |              |            |            |      Ch1       |     Ch2     |     Ch3     |      Ch4      | Ch5 (HIGH AT BOOT) |       |
 | IR Transmitter     |              |            |            |                |             |             |               |         IR         |       |
 | PCF8574            |              |    SDA     |    SCL     | `INT (jumper)` |             |             |               |                    |       |
-I am in the process of setting up a tindie store or similar and will link it here if you are interested to buy a finished board!
 
 |                    | `GPIO2` |         GPIO4          |         GPIO5          |     GPIO12     |       GPIO13        |     GPIO14     |   `GPIO15`   |  `GPIO16`   |     `ADC`     |
 | ------------------ | :-----: | :--------------------: | :--------------------: | :------------: | :-----------------: | :------------: | :----------: | :---------: | :-----------: |
