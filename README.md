@@ -46,6 +46,8 @@ This is a Tasmota compatible dimmer/actuator/sensor and general purpose smart ho
 
 ESP-Hiro has multiple interfaces directly on board which allow you to connect almost anything you would want to have automated. Some parts like a DHT22 or an IR blaster are basically pre-wired on board, all of the ESP8266's usable GPIO are broken out to plugs/sockets, and since the board was (and still is) pretty empty I've thrown in a PCF8574 port expander in case you might think of a usecase with more pins than the ESP has. 
 
+My house is already "smarted-up" with an old version of this, but as I am replacing the old version with this one I will update this repo with the templates of my nodes and pictures of the usecases.
+
 # Pin tables
 
 ## Devices
