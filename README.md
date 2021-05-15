@@ -6,6 +6,9 @@
 
 Please check out [this issue here](https://github.com/Chrismettal/ESP-Hiro/issues/1) to let me know!
 
+# Contents
+
+- [Contents](#contents)
 - [What is this?](#what-is-this)
 - [Pin tables](#pin-tables)
   - [Devices](#devices)
