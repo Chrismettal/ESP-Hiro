@@ -92,7 +92,7 @@ A header for an IR blaster is present, connected via the MOSFET Q5. It is suppli
 
 ## Relays
 
-![RelayBoard](img/RelayBoard.jpg)
+![RelayBoard](img/Relay.jpg)
 
 These relay boards can be connected to basically any GPIO from the pin table you want, but you need to disconnect "JD-VCC" jumper and supply 3.3 V to JD so you don't feed 5 V back into the ESP. They can also be connected to the PCF8574 expander header outputs if configured accordingly.
 
@@ -119,13 +119,13 @@ Setting the following jumpers will enable the PCF including the interrupt pin, a
 
 ### Temperature Sensors
 
-![Temp](img/Temp.png)
+![Temp](img/DHT.jpg)
 
 While you can use any temperature sensor supported by Tasmota, the two predefined variants are DHT22 and DS18B20 type sensors. Both are defined to go on `J9` and use `GPIO02`.
 
 ### 433MHz
 
-![433](img/433.png)
+![433](img/433.jpg)
 
 A 433MHz antenna can be plugged straight onto J10, using pin 2-4, which will use GPIO15 for the RC-Switch library.
 
@@ -165,6 +165,8 @@ Right now there is no build guide for soldering one yourself since this was an e
 ## 3D printing
 
 ![3DParts](img/3Dparts.png)
+
+![Finished](img/Finished.jpg)
 
 The FreeCAD project file (done in 0.20 dev versions) contains parametric design files for 4 different cases. There is one "Shoe" that only covers the bottom of the PCB, one "Slim" case exposing all connectors, and two "Thicc" cases, only exposing the side connectors. For these variants, printable stl files are exported in the FreeCAD/stl folder.
 
