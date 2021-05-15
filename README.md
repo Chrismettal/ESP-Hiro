@@ -58,6 +58,7 @@ This table shows the hardware that is enabled on the PCB right away. Obviously o
 | IR Transmitter     |              |            |            |                |             |             |               |         IR         |       |
 | PCF8574            |              |    SDA     |    SCL     | `INT (jumper)` |             |             |               |                    |       |
 
+
 |                    | `GPIO2` |         GPIO4          |         GPIO5          |     GPIO12     |       GPIO13        |     GPIO14     |   `GPIO15`   |  `GPIO16`   |     `ADC`     |
 | ------------------ | :-----: | :--------------------: | :--------------------: | :------------: | :-----------------: | :------------: | :----------: | :---------: | :-----------: |
 | Room Controller    |  DHT22  |                        |                        |     PWM R      |        PWM G        |     PWM B      |    PWM W     | PWM Heating |               |
@@ -65,8 +66,6 @@ This table shows the hardware that is enabled on the PCB right away. Obviously o
 | IR AC Controller   | DS18S20 |                        |                        |    Button 1    |      Button 2       |                |              |     IR      |               |
 | Automated Plant    |  DHT22  | SDA LCD + Light sensor | SCL LCD + Light sensor | FET water pump | FET fertilizer pump |   PWM light    | SR04 Trigger |  SR04 Echo  | Soil Moisture |
 | Info Display       |         |        SDA LCD         |        SCL LCD         |   Encoder A    |      Encoder B      | Encoder Button |              |             |               |
-| -                  |         |                        |                        |                |                     |                |              |             |               |
-| -                  |         |                        |                        |                |                     |                |              |             |               |
 
 
 # Defined I/O
