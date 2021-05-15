@@ -2,6 +2,10 @@
 
 ![Board](img/Nice.png)
 
+## Interested in buying?
+
+Please check out [this issue here](https://github.com/Chrismettal/ESP-Hiro/issues/1) to let me know!
+
 - [What is this?](#what-is-this)
 - [Pin tables](#pin-tables)
   - [Devices](#devices)
@@ -153,7 +157,8 @@ Obviously as this is basically another ESP8266 devboard you can code your own so
 
 ## Buying
 
-I have set up a store at https://www.tindie.com/stores/binary-6/ where I am currently gauging interest in this project. I will order a new set of V1.0.1 PCBs which I can sell as a (mostly assembled) kit. I also offer the printed cases as well.
+I have set up a store at https://www.tindie.com/stores/binary-6/ and I am currently gauging interest in this project. I will order a new set of V1.0.1 PCBs which I can sell as a (mostly assembled) kit. I also offer the printed cases as well.
+If you want one, please go ahead and vote on [this issue here](https://github.com/Chrismettal/ESP-Hiro/issues/1) so I know how many to commission!
 
 ## Building my own
 
@@ -170,6 +175,8 @@ Right now there is no build guide for soldering one yourself since this was an e
 The FreeCAD project file (done in 0.20 dev versions) contains parametric design files for 4 different cases. There is one "Shoe" that only covers the bottom of the PCB, one "Slim" case exposing all connectors, and two "Thicc" cases, only exposing the side connectors. For these variants, printable stl files are exported in the FreeCAD/stl folder.
 
 All cuts and breakthroughs are done in the last steps of each body, so should choose to only populate one of the PWM jacks you can delete the "pocket" operations for the other PWM jacks. The same applies to the screwholes in the bottom as well as most other jacks.
+
+You can also find the project on [PrusaPrinters](https://www.prusaprinters.org/prints/66847-esp-hiro-cases-smart-home-devboard-tasmota-compati)!
 
 ## Mechanical
 
