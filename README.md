@@ -39,6 +39,7 @@ Please check out [this issue here](https://github.com/Chrismettal/ESP-Hiro/issue
   - [Uploading the Firmware](#uploading-the-firmware)
   - [Templates](#templates)
 - [Tools used](#tools-used)
+- [Changelog](#changelog)
 
 # What is this?
 
@@ -254,3 +255,9 @@ The schematic, PCB and screenshot renders were done in __[KiCAD](https://kicad.o
 All the 3d printable files are done in __[FreeCAD](https://www.freecadweb.org/)__ 0.20 dev versions. Find all 3d printable files in the `3DPrinting` folder as well as on __[Prusaprinters.org](https://www.prusaprinters.org/social/13425-chrismettal/prints)__. 
 
 Models are printed on __[Prusa](https://www.prusa3d.com/)__ MK3s printers and sliced with Prusaslicer. 
+
+# Changelog
+
+- V0.2    - Initial prototype
+- V1.0    - Initial release - fixed PCF8574 pinout and updated some silkscreen documentation - fully tested working
+- V1.0.1  - Minor silkscreen documentation updates - not ordered yet, will be the initial production run
