@@ -1,0 +1,8 @@
+Comment,Designator,Footprint,LCSC
+CiKe4pinPlug,"J9_1,J10_1,J11_1,J12_1,J13_1,J14_1,J15_1",,C577528
+CiKe2PinPlug,"J1_1,J2_1,J3_1,J4_1,J5_1,J8_1",,C71370
+CiKe4pinSock,"J9,J10,J11,J12,J13,J14,J15",MeineBib:CixiKefa_KF2EDGV_2.54_4xSocket,C577587
+CiKe2PinSock,"J1,J2,J3,J4,J5,J8",MeineBib:Cixi_Kefa_Elec_KF2EDGR-5.08-2P,C8383
+Barrel_Jack_Switch,J7,Connector_BarrelJack:BarrelJack_Horizontal,C381116
+ESP-12E,U1,ESP8266:ESP-12E_SMD,C82891
+LED,D3,,C5119
