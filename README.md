@@ -260,4 +260,4 @@ Models are printed on __[Prusa](https://www.prusa3d.com/)__ MK3s printers and sl
 
 - V0.2    - Initial prototype
 - V1.0    - Initial release - fixed PCF8574 pinout and updated some silkscreen documentation - fully tested working
-- V1.0.1  - Minor silkscreen documentation updates - available production run
+- V1.0.1  - Minor silkscreen documentation updates - current production run
