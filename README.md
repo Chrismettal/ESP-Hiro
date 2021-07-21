@@ -4,8 +4,14 @@
 
 ## Interested in buying?
 
-Please check out [this issue here](https://github.com/Chrismettal/ESP-Hiro/issues/1) to let me know!
+You can find the mostly assembled kit as well as 3D printed parts over at my tindie store!
 
+<a href="https://www.tindie.com/stores/binary-6/?ref=offsite_badges&utm_source=sellers_Chrismettal&utm_medium=badges&utm_campaign=badge_medium"><img src="https://d2ss6ovg47m0r5.cloudfront.net/badges/tindie-mediums.png" alt="I sell on Tindie" width="150" height="78"></a>
+
+
+Also, if you like my work please consider supporting my caffeine addiction!
+
+<a href='https://ko-fi.com/U7U6G0X3' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi4.png?v=0' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
 # Contents
 
 - [Contents](#contents)
@@ -39,6 +45,9 @@ Please check out [this issue here](https://github.com/Chrismettal/ESP-Hiro/issue
   - [Uploading the Firmware](#uploading-the-firmware)
   - [Templates](#templates)
 - [Tools used](#tools-used)
+- [Other boards](#other-boards)
+  - [CP2102 USB - serial converter](#cp2102-usb---serial-converter)
+  - [24 - 5 V step down converter](#24---5-v-step-down-converter)
 - [Changelog](#changelog)
 
 # What is this?
@@ -61,7 +70,9 @@ This table shows the hardware that is enabled on the PCB right away. Obviously o
 | I²C                |              |    SDA     |    SCL     |                |             |             |               |                    |       |
 | Deep Sleep         |              |            |            |                |             |             |    Disable    |        RST         |       |
 | ADC                |              |            |            |                |             |             |               |                    |   X   |
-| 433Mhz Transmitter |              |            |            |                |             |             |       X       |                    |       |
+| 433Mhz Transmitter |              |            |  If you like my work please consider supporting my caffeine addiction!
+
+<a href='https://ko-fi.com/U7U6G0X3' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi4.png?v=0' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>         |                |             |             |       X       |                    |       |
 | AM2302/DHT22       |      X       |            |            |                |             |             |               |                    |       |
 | DS18x20            |      X       |            |            |                |             |             |               |                    |       |
 | 2.5 A MOSFET PWM   |              |            |            |      Ch1       |     Ch2     |     Ch3     |      Ch4      | Ch5 (HIGH AT BOOT) |       |
@@ -163,8 +174,9 @@ Obviously as this is basically another ESP8266 devboard you can code your own so
 
 ## Buying
 
-I have set up a store at https://www.tindie.com/stores/binary-6/ and I am currently gauging interest in this project. I will order a new set of V1.0.1 PCBs which I can sell as a (mostly assembled) kit. I also offer the printed cases as well.
-If you want one, please go ahead and vote on [this issue here](https://github.com/Chrismettal/ESP-Hiro/issues/1) so I know how many to commission!
+You can find the mostly assembled kit as well as 3D printed parts over at my tindie store!
+
+<a href="https://www.tindie.com/stores/binary-6/?ref=offsite_badges&utm_source=sellers_Chrismettal&utm_medium=badges&utm_campaign=badge_medium"><img src="https://d2ss6ovg47m0r5.cloudfront.net/badges/tindie-mediums.png" alt="I sell on Tindie" width="150" height="78"></a>
 
 ## Building my own
 
@@ -256,8 +268,26 @@ All the 3d printable files are done in __[FreeCAD](https://www.freecadweb.org/)_
 
 Models are printed on __[Prusa](https://www.prusa3d.com/)__ MK3s printers and sliced with Prusaslicer. 
 
+# Other boards
+
+For some reason, I have left two boards, designed during prototyping in this repo as well. The two boards are basically snippets from the actual board, to test the serial connection as well as the power supply early.
+
+The two boards are:
+
+## CP2102 USB - serial converter
+
+![CP2102](img/CP2102_only.png)
+
+The CP2102 only, as a fully functional USB-Serial converter to interface with your ESP or whatever you want
+
+## 24 - 5 V step down converter
+
+![DCDC](img/DC_DC_only.png)
+
+Just the 24 V to 5 V step-down converter. Fixed to output about 5 V after the output diode.
+
 # Changelog
 
 - V0.2    - Initial prototype
 - V1.0    - Initial release - fixed PCF8574 pinout and updated some silkscreen documentation - fully tested working
-- V1.0.1  - Minor silkscreen documentation updates - current production run
+- V1.0.1  - Minor silkscreen documentation updates - current production run available at Tindie
