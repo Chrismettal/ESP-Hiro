@@ -291,3 +291,4 @@ Just the 24 V to 5 V step-down converter. Fixed to output about 5 V after the ou
 - V0.2    - Initial prototype
 - V1.0    - Initial release - fixed PCF8574 pinout and updated some silkscreen documentation - fully tested working
 - V1.0.1  - Minor silkscreen documentation updates - current production run available at Tindie
+- V1.0.2  - Minor silkscreen update, change GitHub to GitLab in info link, not ordered and no gerbers generated yet
