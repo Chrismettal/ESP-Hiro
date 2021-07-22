@@ -12,6 +12,7 @@ You can find the mostly assembled kit as well as 3D printed parts over at my tin
 Also, if you like my work please consider supporting my caffeine addiction!
 
 <a href='https://ko-fi.com/U7U6G0X3' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi4.png?v=0' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
+
 # Contents
 
 - [Contents](#contents)
