@@ -71,9 +71,7 @@ This table shows the hardware that is enabled on the PCB right away. Obviously o
 | I²C                |              |    SDA     |    SCL     |                |             |             |               |                    |       |
 | Deep Sleep         |              |            |            |                |             |             |    Disable    |        RST         |       |
 | ADC                |              |            |            |                |             |             |               |                    |   X   |
-| 433Mhz Transmitter |              |            |  If you like my work please consider supporting my caffeine addiction!
-
-<a href='https://ko-fi.com/U7U6G0X3' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi4.png?v=0' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>         |                |             |             |       X       |                    |       |
+| 433Mhz Transmitter |              |            |            |                |             |             |       X       |                    |       |
 | AM2302/DHT22       |      X       |            |            |                |             |             |               |                    |       |
 | DS18x20            |      X       |            |            |                |             |             |               |                    |       |
 | 2.5 A MOSFET PWM   |              |            |            |      Ch1       |     Ch2     |     Ch3     |      Ch4      | Ch5 (HIGH AT BOOT) |       |
