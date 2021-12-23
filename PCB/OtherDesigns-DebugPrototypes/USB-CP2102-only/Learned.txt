@@ -1,3 +1,4 @@
 PCB works, USB-C and CP2102 proven. No further tests on TLV75533 done. 
 
-Lower pin row and right pin row does not line up perfectly on 2.54mm perfboard, should have moved right row to align both on same grid.
+- Lower pin row and right pin row does not line up perfectly on 2.54mm perfboard, should have moved right row to align both on same grid.
+- GPIO1 / GPIO3 are bad labels. Should have put GPIO1-RX/GPIO3-TX on as well
