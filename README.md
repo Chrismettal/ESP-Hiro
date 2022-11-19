@@ -8,10 +8,7 @@ You can find the mostly assembled kit as well as 3D printed parts over at my tin
 
 <a href="https://www.tindie.com/stores/binary-6/?ref=offsite_badges&utm_source=sellers_Chrismettal&utm_medium=badges&utm_campaign=badge_medium"><img src="https://d2ss6ovg47m0r5.cloudfront.net/badges/tindie-mediums.png" alt="I sell on Tindie" width="150" height="78"></a>
 
-
-Also, if you like my work please consider supporting my caffeine addiction!
-
-<a href='https://ko-fi.com/U7U6G0X3' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi4.png?v=0' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
+**If you like my work please consider [supporting my caffeine addiction](https://gitlab.com/Chrismettal#donations)!**
 
 # Contents
 
@@ -39,7 +36,7 @@ Also, if you like my work please consider supporting my caffeine addiction!
   - [Mechanical](#mechanical)
   - [Power supply](#power-supply)
   - [Jumpers](#jumpers)
-    - [V-USB -> +5V](#v-usb---5v)
+    - [V-USB -\> +5V](#v-usb---5v)
     - [PCF8574](#pcf8574-1)
     - [IR resistor](#ir-resistor)
     - [Deep sleep](#deep-sleep)
